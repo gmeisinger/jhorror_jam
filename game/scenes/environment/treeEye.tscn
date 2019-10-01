@@ -1,0 +1,88 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://scenes/environment/treeEye.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/environment/tree_eye7.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/environment/tree_eye6.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/environment/tree_eye5.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/environment/tree_eye4.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/environment/tree_eye3.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/environment/tree_eye2.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/environment/tree_eye1.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/environment/tree_eye0.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/environment/pupil.png" type="Texture" id=10]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 150.0
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "close",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ) ],
+"loop": false,
+"name": "open",
+"speed": 4.0
+} ]
+
+[sub_resource type="Animation" id=3]
+resource_name = "pupilFadeIn"
+tracks/0/type = "value"
+tracks/0/path = NodePath("pupil:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "pupilFadeOut"
+tracks/0/type = "value"
+tracks/0/path = NodePath("pupil:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="treeEye" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="playerDetectArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="playerDetectArea"]
+shape = SubResource( 2 )
+
+[node name="eyeballAnim" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "open"
+
+[node name="pupil" type="Sprite" parent="."]
+use_parent_material = true
+texture = ExtResource( 10 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+visible = false
+rect = Rect2( -40, -40, 80, 80 )
+process_parent = true
+physics_process_parent = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/pupilFadeIn = SubResource( 3 )
+anims/pupilFadeOut = SubResource( 4 )
+[connection signal="body_entered" from="playerDetectArea" to="." method="_on_playerDetectArea_body_entered"]
+[connection signal="body_exited" from="playerDetectArea" to="." method="_on_playerDetectArea_body_exited"]
+[connection signal="animation_finished" from="eyeballAnim" to="." method="_on_eyeballAnim_animation_finished"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

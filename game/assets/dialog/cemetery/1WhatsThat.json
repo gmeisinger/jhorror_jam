@@ -1,0 +1,35 @@
+{
+	"description": "The characters turn around (face north).",
+	"lines" : [
+		{
+			"speaker" : "Kevin",
+			"location" : "center_left",
+			"steps" : [
+					{
+						"text" : "Woa!!!  Did you see that!!",
+						"time" : 0.05
+					}
+				]
+		},
+		{
+			"speaker" : "Sarah",
+			"location" : "center_right",
+			"steps" : [
+					{
+						"text" : "See what?  I didn't see anything.",
+						"time" : 0.05
+					}
+				]
+		},
+		{
+			"speaker" : "Kevin",
+			"location" : "center_left",
+			"steps" : [
+					{
+						"text" : "Come on!!  Hide behind that tree!!  Quick!!",
+						"time" : 0.05
+					}
+				]
+		}
+	]
+}

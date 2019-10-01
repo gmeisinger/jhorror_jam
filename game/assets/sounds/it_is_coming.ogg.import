@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/it_is_coming.ogg-61c0e4fcdc7b56fe180441649fa0378a.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/it_is_coming.ogg"
+dest_files=[ "res://.import/it_is_coming.ogg-61c0e4fcdc7b56fe180441649fa0378a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

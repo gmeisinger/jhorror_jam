@@ -1,0 +1,27 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/images/cemetery/spirit1.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/cemetery/spirit2.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/cemetery/spirit3.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/cemetery/spirit4.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/cemetery/spirit5.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/cemetery/spirit6.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/cemetery/spirit7.png" type="Texture" id=7]
+[ext_resource path="res://scenes/cemetery/cemeterySpirit.gd" type="Script" id=8]
+[ext_resource path="res://scenes/storm/lightningOutline.tscn" type="PackedScene" id=9]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="cemeterySpirit" type="AnimatedSprite"]
+frames = SubResource( 1 )
+script = ExtResource( 8 )
+
+[node name="lightningOutline" parent="." instance=ExtResource( 9 )]
+direction_tolerance = 90.0
+invisible = true

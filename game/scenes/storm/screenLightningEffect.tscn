@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/images/plain_background.png" type="Texture" id=1]
+[ext_resource path="res://scenes/storm/screenLightningEffect.gd" type="Script" id=2]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+uniform float amt = 0.0;
+
+void fragment()
+{
+	vec3 c = textureLod(SCREEN_TEXTURE, SCREEN_UV, 0.0).rgb;
+	COLOR.rgb = c + vec3(amt, amt, amt);
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/amt = 0.0
+
+[node name="screenLightningEffect" type="TextureRect"]
+material = SubResource( 2 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="lightningEffectTimer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+[connection signal="timeout" from="lightningEffectTimer" to="." method="_on_lightningEffectTimer_timeout"]

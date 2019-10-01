@@ -1,0 +1,79 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scenes/storm/lightningTest.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/plain_background.png" type="Texture" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://scenes/storm/screenLightningEffect.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/topDownPlayer/TopDownPlayer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/images/tests/TomSWalkSprite.png" type="Texture" id=6]
+[ext_resource path="res://scenes/storm/lightningOutline.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/shaders/lightningOutlineMaterial.tres" type="Material" id=8]
+[ext_resource path="res://assets/images/tests/SarahSWalkSprite.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/kevinSWalkSprite.png" type="Texture" id=10]
+[ext_resource path="res://scenes/storm/lightningSpawner.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/images/tests/large_tree_sketch.png" type="Texture" id=12]
+
+[node name="lightningTest" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="background" type="TextureRect" parent="."]
+modulate = Color( 0, 0.192157, 0.231373, 1 )
+margin_left = -200.0
+margin_top = -100.0
+margin_right = 824.0
+margin_bottom = 500.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="icon" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+
+[node name="hud" type="CanvasLayer" parent="."]
+
+[node name="screenLightningEffect" parent="hud" instance=ExtResource( 4 )]
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="TopDownPlayer" parent="YSort" instance=ExtResource( 5 )]
+
+[node name="TomSWalkSprite" type="Sprite" parent="YSort"]
+editor/display_folded = true
+position = Vector2( 290, 263 )
+texture = ExtResource( 6 )
+hframes = 6
+
+[node name="lightningOutline" parent="YSort/TomSWalkSprite" instance=ExtResource( 7 )]
+direction_tolerance = 90.0
+invisible = true
+
+[node name="SarahSWalkSprite" type="Sprite" parent="YSort"]
+editor/display_folded = true
+material = ExtResource( 8 )
+position = Vector2( 296, 148 )
+texture = ExtResource( 9 )
+hframes = 6
+
+[node name="lightningOutline" parent="YSort/SarahSWalkSprite" instance=ExtResource( 7 )]
+
+[node name="kevinSWalkSprite" type="Sprite" parent="YSort"]
+position = Vector2( 323, 212 )
+texture = ExtResource( 10 )
+hframes = 6
+
+[node name="lightningOutline" parent="YSort/kevinSWalkSprite" instance=ExtResource( 7 )]
+
+[node name="lightningSpawner" parent="YSort" instance=ExtResource( 11 )]
+show_position = true
+spawn_time_max = 2.0
+spawn_radius_about_player_min = 32.0
+spawn_radius_about_player_max = 32.0
+
+[node name="large_tree_sketch" type="Sprite" parent="YSort"]
+editor/display_folded = true
+position = Vector2( 402, 243 )
+texture = ExtResource( 12 )
+
+[node name="lightningOutline" parent="YSort/large_tree_sketch" instance=ExtResource( 7 )]

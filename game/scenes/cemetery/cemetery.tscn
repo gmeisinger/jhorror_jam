@@ -1,0 +1,634 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://scenes/cemetery/cemetery.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/grass_tile_32x32.png" type="Texture" id=2]
+[ext_resource path="res://scenes/topDownPlayer/TopDownPlayer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/cemetery/caveHill.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/cemetery/cemeteryTree.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/actor/actor.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/cemetery/tombstone.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/cemetery/statue.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/cemetery/cemeterySpirit.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/cemetery/vengefulSpirit.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/images/shadow_tile_32X32.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/shadow_border_tile_32X32.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/environment/tree1.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/environment/tree3.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/environment/tree2.png" type="Texture" id=15]
+[ext_resource path="res://assets/images/environment/tree5.png" type="Texture" id=16]
+[ext_resource path="res://assets/images/environment/tree6.png" type="Texture" id=17]
+[ext_resource path="res://assets/images/environment/tree7.png" type="Texture" id=18]
+[ext_resource path="res://scenes/topDownPlayer/droneCamera.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/hud/hud.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/storm/lightningSpawner.tscn" type="PackedScene" id=21]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 500, 120 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 500, 120 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 120, 380 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 120, 380 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "0GateIsLocked"
+tracks/0/type = "value"
+tracks/0/path = NodePath("scriptedSceneDroneCamera:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 509.188, 732.765 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("YSort/TopDownPlayer:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 512.507, 934.525 ) ]
+}
+
+[node name="cemetery" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="grass" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 1000, 1000 )
+texture = ExtResource( 2 )
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="YSort" type="YSort" parent="."]
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TopDownPlayer" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 821.753, 928.803 )
+enabled = false
+
+[node name="caveHill" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 374.907, 332.735 )
+
+[node name="cemeteryTree" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 661.231, 664.892 )
+
+[node name="actor" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 469.137, 917.572 )
+speed = 65
+
+[node name="actor2" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 507.362, 917.572 )
+
+[node name="tombstone" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 310.118, 639.968 )
+
+[node name="tombstone14" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 310.118, 514.051 )
+
+[node name="tombstone26" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 298.84, 453.017 )
+frame = 8
+random_image = false
+
+[node name="tombstone27" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 430.86, 452.353 )
+frame = 8
+random_image = false
+
+[node name="tombstone28" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 436.831, 405.914 )
+
+[node name="tombstone29" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 391.055, 405.914 )
+
+[node name="tombstone30" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 341.299, 405.914 )
+
+[node name="tombstone31" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 292.206, 405.914 )
+
+[node name="tombstone15" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 361.359, 514.051 )
+
+[node name="tombstone16" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 412.599, 514.051 )
+
+[node name="tombstone11" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 310.118, 551.123 )
+
+[node name="tombstone12" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 358.181, 551.787 )
+
+[node name="tombstone13" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 406.244, 551.787 )
+
+[node name="tombstone8" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 310.118, 601.438 )
+
+[node name="tombstone9" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 355.003, 601.438 )
+frame = 8
+random_image = false
+
+[node name="tombstone10" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 400.683, 601.438 )
+
+[node name="tombstone2" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 350.34, 639.968 )
+
+[node name="tombstone3" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 390.561, 639.968 )
+
+[node name="tombstone4" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 533.416, 624.712 )
+
+[node name="tombstone17" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 533.416, 572.401 )
+
+[node name="tombstone18" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 580.685, 572.401 )
+
+[node name="tombstone19" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 629.214, 572.401 )
+
+[node name="tombstone20" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 672.701, 572.401 )
+
+[node name="tombstone21" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 716.188, 572.401 )
+
+[node name="tombstone22" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 716.188, 512.03 )
+
+[node name="tombstone23" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 673.066, 512.03 )
+
+[node name="tombstone24" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 619.992, 512.03 )
+
+[node name="tombstone25" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 569.573, 512.03 )
+
+[node name="tombstone32" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 584.168, 449.668 )
+
+[node name="tombstone33" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 638.568, 449.668 )
+
+[node name="tombstone34" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 700.929, 449.668 )
+frame = 8
+random_image = false
+
+[node name="tombstone35" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 700.929, 389.961 )
+
+[node name="tombstone36" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 643.875, 389.961 )
+
+[node name="tombstone37" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 588.148, 389.961 )
+
+[node name="tombstone5" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 574.747, 624.711 )
+
+[node name="tombstone6" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 620.239, 624.711 )
+
+[node name="tombstone7" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 659.628, 624.711 )
+
+[node name="statue" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 365.778, 469.026 )
+
+[node name="cemeterySpirit" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 451.359, 517.455 )
+frame = 2
+
+[node name="cemeterySpirit2" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 552.862, 498.216 )
+frame = 1
+
+[node name="cemeterySpirit3" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 327.299, 545.319 )
+frame = 2
+
+[node name="cemeterySpirit4" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 348.529, 445.143 )
+
+[node name="cemeterySpirit5" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 369.095, 592.422 )
+frame = 3
+
+[node name="cemeterySpirit6" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 678.912, 435.855 )
+frame = 4
+
+[node name="cemeterySpirit7" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 699.478, 502.86 )
+frame = 5
+
+[node name="cemeterySpirit8" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 572.101, 380.791 )
+frame = 6
+
+[node name="cemeterySpirit9" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 519.028, 616.305 )
+frame = 1
+
+[node name="vengefulspirit" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 494, 516 )
+
+[node name="trees" type="Node2D" parent="."]
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="topTrees" type="Node2D" parent="trees"]
+editor/display_folded = true
+position = Vector2( 513.857, 126.262 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="trees/topTrees"]
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="trees/topTrees/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="shadow" type="TextureRect" parent="trees/topTrees"]
+margin_left = -500.0
+margin_top = -120.0
+margin_right = 500.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 1000, 100 )
+texture = ExtResource( 11 )
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="shadowBorder" type="TextureRect" parent="trees/topTrees"]
+margin_left = -500.0
+margin_top = 60.0
+margin_right = 500.0
+margin_bottom = 92.0
+rect_min_size = Vector2( 1000, 32 )
+texture = ExtResource( 12 )
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="tree1" type="Sprite" parent="trees/topTrees"]
+position = Vector2( -358.232, -78.2821 )
+texture = ExtResource( 13 )
+
+[node name="tree3" type="Sprite" parent="trees/topTrees"]
+position = Vector2( -245.344, -83.834 )
+texture = ExtResource( 14 )
+
+[node name="tree2" type="Sprite" parent="trees/topTrees"]
+position = Vector2( 456.041, -89.3858 )
+texture = ExtResource( 15 )
+
+[node name="tree5" type="Sprite" parent="trees/topTrees"]
+position = Vector2( -125.054, -74.5808 )
+texture = ExtResource( 16 )
+
+[node name="tree6" type="Sprite" parent="trees/topTrees"]
+position = Vector2( -19.5687, -117.145 )
+texture = ExtResource( 17 )
+
+[node name="tree7" type="Sprite" parent="trees/topTrees"]
+position = Vector2( 139.585, -98.6389 )
+texture = ExtResource( 18 )
+
+[node name="tree4" type="Sprite" parent="trees/topTrees"]
+position = Vector2( 306.14, -133.801 )
+texture = ExtResource( 13 )
+
+[node name="tree8" type="Sprite" parent="trees/topTrees"]
+position = Vector2( -258.299, -6.10794 )
+texture = ExtResource( 15 )
+
+[node name="tree9" type="Sprite" parent="trees/topTrees"]
+position = Vector2( 348.705, -63.4771 )
+texture = ExtResource( 16 )
+
+[node name="tree10" type="Sprite" parent="trees/topTrees"]
+position = Vector2( 256.8, -16.8241 )
+texture = ExtResource( 18 )
+
+[node name="tree11" type="Sprite" parent="trees/topTrees"]
+position = Vector2( -419.302, 14.2489 )
+texture = ExtResource( 17 )
+
+[node name="tree12" type="Sprite" parent="trees/topTrees"]
+position = Vector2( 11.8918, 17.9501 )
+texture = ExtResource( 14 )
+
+[node name="tree13" type="Sprite" parent="trees/topTrees"]
+position = Vector2( -143.56, 17.9501 )
+texture = ExtResource( 15 )
+
+[node name="tree14" type="Sprite" parent="trees/topTrees"]
+position = Vector2( 121.078, -35.7178 )
+texture = ExtResource( 13 )
+
+[node name="tree15" type="Sprite" parent="trees/topTrees"]
+position = Vector2( -45.4774, -54.224 )
+texture = ExtResource( 18 )
+
+[node name="tree16" type="Sprite" parent="trees/topTrees"]
+position = Vector2( 439.385, -2.40671 )
+texture = ExtResource( 16 )
+
+[node name="bottomBarrier" type="Node2D" parent="trees"]
+position = Vector2( 513.857, 886.771 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="trees/bottomBarrier"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="trees/bottomBarrier/StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="leftTrees" type="Node2D" parent="trees"]
+editor/display_folded = true
+position = Vector2( 120.39, 625.438 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="shadow" type="TextureRect" parent="trees/leftTrees"]
+margin_left = -120.0
+margin_top = -380.0
+margin_right = 60.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 10, 10 )
+texture = ExtResource( 11 )
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="shadowBorder" type="TextureRect" parent="trees/leftTrees"]
+margin_left = 60.0
+margin_top = 380.0
+margin_right = 820.0
+margin_bottom = 412.0
+rect_min_size = Vector2( 10, 32 )
+rect_rotation = -90.0
+texture = ExtResource( 12 )
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="trees/leftTrees"]
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="trees/leftTrees/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="tree2" type="Sprite" parent="trees/leftTrees"]
+position = Vector2( 64.96, -414.352 )
+texture = ExtResource( 15 )
+
+[node name="tree7" type="Sprite" parent="trees/leftTrees"]
+position = Vector2( -60.1946, -402.108 )
+texture = ExtResource( 18 )
+
+[node name="tree5" type="Sprite" parent="trees/leftTrees"]
+position = Vector2( 51.3562, -331.369 )
+texture = ExtResource( 16 )
+
+[node name="tree3" type="Sprite" parent="trees/leftTrees"]
+position = Vector2( -73.7983, -256.548 )
+texture = ExtResource( 14 )
+
+[node name="tree1" type="Sprite" parent="trees/leftTrees"]
+position = Vector2( 18.7072, -222.539 )
+texture = ExtResource( 13 )
+
+[node name="tree6" type="Sprite" parent="trees/leftTrees"]
+position = Vector2( -49.3116, -116.43 )
+texture = ExtResource( 17 )
+
+[node name="tree8" type="Sprite" parent="trees/leftTrees"]
+position = Vector2( 33.6713, -117.79 )
+texture = ExtResource( 18 )
+
+[node name="tree4" type="Sprite" parent="trees/leftTrees"]
+position = Vector2( 36.1459, -21.9748 )
+texture = ExtResource( 15 )
+
+[node name="tree9" type="Sprite" parent="trees/leftTrees"]
+position = Vector2( -79.0968, 8.0885 )
+texture = ExtResource( 14 )
+
+[node name="tree10" type="Sprite" parent="trees/leftTrees"]
+position = Vector2( -62.395, 94.938 )
+texture = ExtResource( 18 )
+
+[node name="tree11" type="Sprite" parent="trees/leftTrees"]
+position = Vector2( 54.5179, 73.2256 )
+texture = ExtResource( 16 )
+
+[node name="tree12" type="Sprite" parent="trees/leftTrees"]
+position = Vector2( 17.7738, 173.437 )
+texture = ExtResource( 15 )
+
+[node name="tree13" type="Sprite" parent="trees/leftTrees"]
+position = Vector2( -79.0968, 240.244 )
+texture = ExtResource( 16 )
+
+[node name="tree14" type="Sprite" parent="trees/leftTrees"]
+position = Vector2( 31.1353, 238.574 )
+texture = ExtResource( 18 )
+
+[node name="tree15" type="Sprite" parent="trees/leftTrees"]
+position = Vector2( 715.911, 288.679 )
+texture = ExtResource( 15 )
+
+[node name="rightTrees" type="Node2D" parent="trees"]
+editor/display_folded = true
+position = Vector2( 895.58, 625.438 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="shadow" type="TextureRect" parent="trees/rightTrees"]
+margin_left = -60.0
+margin_top = -380.0
+margin_right = 120.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 10, 10 )
+texture = ExtResource( 11 )
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="shadowBorder" type="TextureRect" parent="trees/rightTrees"]
+margin_left = -60.0
+margin_top = -380.0
+margin_right = 700.0
+margin_bottom = -348.0
+rect_min_size = Vector2( 10, 32 )
+rect_rotation = 90.0
+texture = ExtResource( 12 )
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="trees/rightTrees"]
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="trees/rightTrees/StaticBody2D"]
+shape = SubResource( 4 )
+
+[node name="tree7" type="Sprite" parent="trees/rightTrees"]
+position = Vector2( -50.9292, -409.457 )
+texture = ExtResource( 18 )
+
+[node name="tree3" type="Sprite" parent="trees/rightTrees"]
+position = Vector2( 59.303, -356.012 )
+texture = ExtResource( 14 )
+
+[node name="tree1" type="Sprite" parent="trees/rightTrees"]
+position = Vector2( 17.5483, -302.566 )
+texture = ExtResource( 13 )
+
+[node name="tree5" type="Sprite" parent="trees/rightTrees"]
+position = Vector2( -29.2168, -227.407 )
+texture = ExtResource( 16 )
+
+[node name="tree2" type="Sprite" parent="trees/rightTrees"]
+position = Vector2( 70.9943, -185.653 )
+texture = ExtResource( 13 )
+
+[node name="tree4" type="Sprite" parent="trees/rightTrees"]
+position = Vector2( -47.5887, -133.877 )
+texture = ExtResource( 15 )
+
+[node name="tree6" type="Sprite" parent="trees/rightTrees"]
+position = Vector2( 50.952, -57.0486 )
+texture = ExtResource( 17 )
+
+[node name="tree8" type="Sprite" parent="trees/rightTrees"]
+position = Vector2( -30.887, 19.7798 )
+texture = ExtResource( 18 )
+
+[node name="tree9" type="Sprite" parent="trees/rightTrees"]
+position = Vector2( 77.6749, 83.2468 )
+texture = ExtResource( 15 )
+
+[node name="tree10" type="Sprite" parent="trees/rightTrees"]
+position = Vector2( -29.2168, 175.107 )
+texture = ExtResource( 13 )
+
+[node name="tree11" type="Sprite" parent="trees/rightTrees"]
+position = Vector2( 59.303, 256.946 )
+texture = ExtResource( 16 )
+
+[node name="scriptedSceneDroneCamera" parent="." instance=ExtResource( 19 )]
+position = Vector2( 510, 733 )
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
+active_rain_manager = false
+
+[node name="hud" parent="." instance=ExtResource( 20 )]
+
+[node name="lightningSpawner" parent="." instance=ExtResource( 21 )]
+spawn_time_max = 1.0
+spawn_radius_about_player_min = 10000.0
+spawn_radius_about_player_max = 11000.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/0GateIsLocked = SubResource( 5 )
+
+[node name="actorStops" type="Node" parent="."]
+editor/display_folded = true
+
+[node name="actor1_move_to_1" type="Position2D" parent="actorStops"]
+position = Vector2( 487.678, 732.65 )
+
+[node name="actor2_move_to_1" type="Position2D" parent="actorStops"]
+position = Vector2( 531.874, 732.65 )
+
+[node name="actor1_move_to_2" type="Position2D" parent="actorStops"]
+position = Vector2( 613.718, 719.418 )
+
+[node name="actor2_move_to_2" type="Position2D" parent="actorStops"]
+position = Vector2( 653.467, 725.299 )
+
+[node name="actor1_move_to_3" type="Position2D" parent="actorStops"]
+position = Vector2( 465.952, 719.418 )
+
+[node name="actor1_move_to_4" type="Position2D" parent="actorStops"]
+position = Vector2( 479.119, 588.233 )
+
+[node name="cameraStops" type="Node" parent="."]
+
+[node name="stop1" type="Position2D" parent="cameraStops"]
+position = Vector2( 510, 733 )
+
+[node name="stop2" type="Position2D" parent="cameraStops"]
+position = Vector2( 510, 528.458 )
+
+[node name="stop3" type="Position2D" parent="cameraStops"]
+position = Vector2( 385.38, 352.334 )
+
+[node name="vengefulSpiritStops" type="Node" parent="."]
+
+[node name="stop1" type="Position2D" parent="vengefulSpiritStops"]
+position = Vector2( 494, 516 )
+
+[node name="stop2" type="Position2D" parent="vengefulSpiritStops"]
+position = Vector2( 478.882, 559.891 )
+
+[node name="miscStops" type="Node" parent="."]
+
+[node name="lightningStop1" type="Position2D" parent="miscStops"]
+position = Vector2( 494, 510 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

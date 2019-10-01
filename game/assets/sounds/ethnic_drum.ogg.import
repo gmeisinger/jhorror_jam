@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ethnic_drum.ogg-12f086d286e5ed9619559bacbf05c037.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/ethnic_drum.ogg"
+dest_files=[ "res://.import/ethnic_drum.ogg-12f086d286e5ed9619559bacbf05c037.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

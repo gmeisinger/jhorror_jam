@@ -1,0 +1,25 @@
+{
+	"description": "Now the figures are gone - no longer revealed in the flashes of lightning.",
+	"lines" : [
+		{
+			"speaker" : "Kevin",
+			"location" : "lower_left",
+			"steps" : [
+					{
+						"text" : "Huh??  Where did they go??  Do you see them anymore??",
+						"time" : 0.05
+					}
+				]
+		},
+		{
+			"speaker" : "Sarah",
+			"location" : "lower_right",
+			"steps" : [
+					{
+						"text" : "No.  I think they're gone.  I wonder why.",
+						"time" : 0.05
+					}
+				]
+		}
+	]
+}

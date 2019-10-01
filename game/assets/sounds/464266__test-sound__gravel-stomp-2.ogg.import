@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/464266__test-sound__gravel-stomp-2.ogg-594831ed3c8f3216fbb481bf76e26d6c.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/464266__test-sound__gravel-stomp-2.ogg"
+dest_files=[ "res://.import/464266__test-sound__gravel-stomp-2.ogg-594831ed3c8f3216fbb481bf76e26d6c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

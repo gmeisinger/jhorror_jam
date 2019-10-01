@@ -1,0 +1,35 @@
+{
+	"description": "Characters enter side by side into the level and turn around.  They are looking at the gate that just locked itself behind them.",
+	"lines" : [
+		{
+			"speaker" : "Kevin",
+			"location" : "center_left",
+			"steps" : [
+					{
+						"text" : "Hey!!  Did you lock the gate?",
+						"time" : 0.05
+					}
+				]
+		},
+		{
+			"speaker" : "Sarah",
+			"location" : "center_right",
+			"steps" : [
+					{
+						"text" : "No.  I think it just locked itself.",
+						"time" : 0.05
+					}
+				]
+		},
+		{
+			"speaker" : "Kevin",
+			"location" : "center_left",
+			"steps" : [
+					{
+						"text" : "OK.  We'll deal with it later.",
+						"time" : 0.05
+					}
+				]
+		}
+	]
+}

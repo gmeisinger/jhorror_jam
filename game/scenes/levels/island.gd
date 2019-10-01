@@ -1,0 +1,41 @@
+extends Node2D
+
+signal FadeOut()
+signal FadeIn()
+
+var has_skipped_cinematic
+const VAN_STOP_Y = 1950.0
+
+func _ready():
+	SignalMgr.register_subscriber(self, "ArrivedAtDestination", "on_ArrivedAtDestination")
+	SignalMgr.register_subscriber(self, "FadeOutFinished", "on_FadeOutFinished")
+	SignalMgr.register_subscriber(self, "script_complete", "on_ArrivedAtDestination")
+	SignalMgr.register_publisher(self, "FadeOut")
+	SignalMgr.register_publisher(self, "FadeIn")
+	$YSort/TopDownPlayer.enabled = false
+	$YSort/Follower.enabled = false
+	$YSort/Follower2.enabled = false
+	$van.enabled = true
+	$van.start(Vector2($van.global_position.x, VAN_STOP_Y))
+	$hud.play_script("scene1")
+
+func _input(ev):
+	if has_skipped_cinematic: return
+	if ev is InputEventKey and ev.scancode == KEY_ESCAPE and not ev.echo:
+		has_skipped_cinematic = true
+		on_ArrivedAtDestination(0)
+		$hud/dialog_box.queue_free()
+
+func _on_river_anim_timer_timeout():
+	$river_anim.frame = ($river_anim.frame + 1) % $river_anim.vframes
+
+func on_ArrivedAtDestination(travel_to):
+	emit_signal("FadeOut")
+
+func on_FadeOutFinished():
+	$van.enabled = false
+	$van.global_position = Vector2($van.global_position.x, VAN_STOP_Y)
+	$YSort/TopDownPlayer.enabled = true
+	$YSort/Follower.enabled = true
+	$YSort/Follower2.enabled = true
+	emit_signal("FadeIn")

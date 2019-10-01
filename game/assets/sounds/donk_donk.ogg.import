@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/donk_donk.ogg-035b3ed9da9b3157b4d9e867cb4ec819.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/donk_donk.ogg"
+dest_files=[ "res://.import/donk_donk.ogg-035b3ed9da9b3157b4d9e867cb4ec819.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

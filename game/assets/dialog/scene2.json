@@ -1,0 +1,36 @@
+{
+	"title" : "Scene 2",
+	"args"	: 0,
+	"lines" : [
+		{
+			"speaker" : "Mike",
+			"location" : "center",
+			"steps" : [
+				{
+					"text" : "According to the map the cemetery is smack dab in the middle of this island.",
+					"time" : 0.05
+					}
+					]
+				},
+		{
+				"speaker" : "Sarah",
+				"location" : "center_right",
+				"steps" : [
+					{
+						"text" : "Well, should be easy enough to find then.",
+						"time" : 0.05
+						}
+						]
+					},
+		{
+			"speaker" : "Bob",
+			"location" : "center_left",
+			"steps" : [
+				{
+					"text" : "OK then.  Everyone ready?  Good.  Let’s make our way to the cemetery.",
+					"time" : 0.05
+					}
+					]
+				}
+			]
+		}

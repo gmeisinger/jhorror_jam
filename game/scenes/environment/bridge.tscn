@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/environment/bridge.gd" type="Script" id=1]
+
+[node name="bridge" type="Node2D"]
+position = Vector2( 606.887, 1962.02 )
+script = ExtResource( 1 )

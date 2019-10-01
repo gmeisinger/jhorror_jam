@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/environment/treeWall.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/environment/tree1.png" type="Texture" id=2]
+[ext_resource path="res://scenes/storm/lightningOutline.tscn" type="PackedScene" id=3]
+
+[node name="horzTreeWall" type="StaticBody2D"]
+script = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 0, -70 )
+polygon = PoolVector2Array( -108.527, 118.663, -108.29, 87.6612, 86.7584, 87.6612, 86.8168, 118.284 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -70 )
+texture = ExtResource( 2 )
+
+[node name="lightningOutline" parent="Sprite" instance=ExtResource( 3 )]

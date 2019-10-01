@@ -1,0 +1,23 @@
+fonts:
+https://fontlibrary.org/en/font/jellee-typeface
+by Alfredo Marco Pradil
+License: OFL (SIL Open Font License)
+
+
+95686__sammyf70__lightning3.wav by sammyf70
+https://freesound.org/people/sammyF70/sounds/95686/
+https://freesound.org/people/sammyF70/
+
+334149__svampen__rain-heavy-loopable.wav by svampen
+https://freesound.org/people/svampen/sounds/334149/
+https://freesound.org/people/svampen/
+
+464266__test-sound__gravel-stomp-2.wav by test_sound
+https://freesound.org/people/test_sound/sounds/464266/
+https://freesound.org/people/test_sound/
+
+157942__adejabor__drag-gravel.wav by adejabor
+https://freesound.org/people/adejabor/sounds/157942/
+https://freesound.org/people/adejabor/
+
+Gonkee's fog shader - https://youtu.be/QEaTsz_0o44

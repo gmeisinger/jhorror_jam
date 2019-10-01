@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ambient_bell.ogg-ef4765301bd59f963ea0a6b6af4f2496.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/ambient_bell.ogg"
+dest_files=[ "res://.import/ambient_bell.ogg-ef4765301bd59f963ea0a6b6af4f2496.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

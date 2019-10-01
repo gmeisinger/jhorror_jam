@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/95686__sammyf70__lightning3.ogg-55388787ac195e2922613f712e7337ad.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/95686__sammyf70__lightning3.ogg"
+dest_files=[ "res://.import/95686__sammyf70__lightning3.ogg-55388787ac195e2922613f712e7337ad.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

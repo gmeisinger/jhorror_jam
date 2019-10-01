@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/more_tension.ogg-c83647cc4816a596ba88bb78cbf7e70f.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/more_tension.ogg"
+dest_files=[ "res://.import/more_tension.ogg-c83647cc4816a596ba88bb78cbf7e70f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

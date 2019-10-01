@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/images/battery_meter/battery_meter1.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/battery_meter/battery_meter2.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/battery_meter/battery_meter3.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/battery_meter/battery_meter4.png" type="Texture" id=4]
+[ext_resource path="res://scenes/hud/healthIndicator.gd" type="Script" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=2]
+resource_name = "blink"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[node name="healthIndicator" type="AnimatedSprite"]
+position = Vector2( 93, 49 )
+frames = SubResource( 1 )
+script = ExtResource( 5 )
+
+[node name="blinkAnimation" type="AnimationPlayer" parent="."]
+anims/blink = SubResource( 2 )

@@ -1,0 +1,45 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://assets/images/cemetery/tombstone1.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/cemetery/tombstone2.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/cemetery/tombstone3.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/cemetery/tombstone4.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/cemetery/tombstone5.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/cemetery/tombstone6.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/cemetery/tombstone7.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/cemetery/tombstone8.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/cemetery/large_toomstone1.png" type="Texture" id=9]
+[ext_resource path="res://scenes/cemetery/tombstone.gd" type="Script" id=10]
+[ext_resource path="res://scenes/storm/lightningOutline.tscn" type="PackedScene" id=11]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 24.3473, 4.91655 )
+
+[node name="tombstone" type="AnimatedSprite"]
+position = Vector2( 0, -18.441 )
+frames = SubResource( 1 )
+script = ExtResource( 10 )
+
+[node name="StaticBody" type="StaticBody2D" parent="."]
+position = Vector2( 0, 18.7099 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody"]
+position = Vector2( -0.161989, 4.94067 )
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="lightningOutline" parent="." instance=ExtResource( 11 )]
+[connection signal="frame_changed" from="." to="." method="_on_tombstone_frame_changed"]

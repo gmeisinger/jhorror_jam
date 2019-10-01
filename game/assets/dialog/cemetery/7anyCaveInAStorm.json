@@ -1,0 +1,15 @@
+{
+	"description": "The camera pans from where the attack happened to the cave at the back of the cemetery.",
+	"lines" : [
+		{
+			"speaker" : "Sarah",
+			"location" : "center_left",
+			"steps" : [
+					{
+						"text" : "Only one way to find out!  I just got to avoid that spirit!",
+						"time" : 0.05
+					}
+				]
+		}
+	]
+}

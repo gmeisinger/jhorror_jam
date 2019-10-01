@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/cemetery/soulSuckTest.gd" type="Script" id=1]
+[ext_resource path="res://scenes/cemetery/vengefulSpirit.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/storm/lightningSpawner.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/actor/actor.tscn" type="PackedScene" id=4]
+
+[node name="soulSuckTest" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="vengefulspirit" parent="." instance=ExtResource( 2 )]
+position = Vector2( 108.673, 101.292 )
+
+[node name="lightningSpawner" parent="." instance=ExtResource( 3 )]
+spawn_time_max = 1.0
+spawn_radius_about_player_min = 10000.0
+spawn_radius_about_player_max = 11000.0
+
+[node name="doAttackBtn" type="Button" parent="."]
+margin_left = 321.0
+margin_top = 31.0
+margin_right = 424.0
+margin_bottom = 70.0
+text = "Do Attack"
+
+[node name="actor" parent="." instance=ExtResource( 4 )]
+position = Vector2( 315.581, 239.608 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 251.296, 148.05 )
+current = true
+zoom = Vector2( 0.5, 0.5 )
+[connection signal="pressed" from="doAttackBtn" to="." method="_on_doAttackBtn_pressed"]

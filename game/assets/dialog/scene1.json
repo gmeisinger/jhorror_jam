@@ -1,0 +1,76 @@
+{
+	"title" : "Scene 1",
+	"args"	: 0,
+	"lines" : [
+		{
+			"speaker" : "Bob",
+			"location" : "center_left",
+			"steps" : [
+				{
+					"text" : "Don’t drive too quickly, or the drone won’t keep up.",
+					"time" : 0.05
+					}
+					]
+				},
+		{
+				"speaker" : "Mary",
+				"location" : "center_right",
+				"steps" : [
+					{
+						"text" : "Ok. Ok.  How’s this?",
+						"time" : 0.05
+						}
+						]
+					},
+		{
+			"speaker" : "Bob",
+			"location" : "center_left",
+			"steps" : [
+				{
+					"text" : "Good.  But don’t stop.  We just want to catch our entry on the island for the documentary.",
+					"time" : 0.05
+					}
+					]
+				},
+		{
+				"speaker" : "Mary",
+				"location" : "center_right",
+				"steps" : [
+					{
+						"text" : "Will the rain affect the drone?",
+						"time" : 0.05
+						}
+						]
+					},
+		{
+			"speaker" : "Bob",
+			"location" : "center_left",
+			"steps" : [
+				{
+					"text" : "No.  It was made for this.  And the weather only helps.  This will look soo cool!",
+					"time" : 0.05
+					}
+					]
+				},
+		{
+				"speaker" : "Mary",
+				"location" : "center_right",
+				"steps" : [
+					{
+						"text" : "Are you sure this bridge is safe?",
+						"time" : 0.05
+						}
+						]
+					},
+		{
+			"speaker" : "Bob",
+			"location" : "center_left",
+			"steps" : [
+				{
+					"text" : "What? That sign back there?  Just people being over cautious.  They always make bridges like ten times stronger than needed.",
+					"time" : 0.05
+					}
+					]
+				}
+			]
+		}

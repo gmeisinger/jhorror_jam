@@ -1,0 +1,15 @@
+{
+	"description": "",
+	"lines" : [
+		{
+			"speaker" : "Bob",
+			"location" : "center_left",
+			"steps" : [
+					{
+						"text" : "",
+						"time" : 0.05
+					}
+				]
+		}
+	]
+}

@@ -1,0 +1,76 @@
+{
+	"title" : "Scene 3",
+	"args"	: 0,
+	"lines" : [
+		{
+			"speaker" : "Tom",
+			"location" : "center_bottom",
+			"steps" : [
+				{
+					"text" : "I don’t remember any reports of a lock on this gate.",
+					"time" : 0.05
+					}
+					]
+				},
+		{
+				"speaker" : "Mike",
+				"location" : "center",
+				"steps" : [
+					{
+						"text" : "Yeah.  And we didn’t bring anything to scale the fence with either.",
+						"time" : 0.05
+						}
+						]
+					},
+		{
+			"speaker" : "Mary",
+			"location" : "center_top",
+			"steps" : [
+				{
+					"text" : "Maybe we can find something to open the lock.",
+					"time" : 0.05
+					}
+					]
+				},
+		{
+			"speaker" : "Mike",
+			"location" : "center",
+			"steps" : [
+				{
+					"text" : "That lock looks pretty old, not to mention creepy.",
+					"time" : 0.05
+					}
+					]
+				},
+		{
+			"speaker" : "",
+			"location" : "center",
+			"steps" : [
+				{
+					"text" : "....",
+					"time" : 0.3
+					}
+					]
+				},
+		{
+			"speaker" : "Mike",
+			"location" : "center",
+			"steps" : [
+				{
+					"text" : "Umm.  I think we should get back to the car till this blows over.",
+					"time" : 0.05
+					}
+					]
+				},
+		{
+			"speaker" : "Sarah",
+			"location" : "center_bottom",
+			"steps" : [
+				{
+					"text" : "Good idea.",
+					"time" : 0.05
+					}
+					]
+				}
+			]
+		}

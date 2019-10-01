@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/images/environment/tree2.png" type="Texture" id=1]
+[ext_resource path="res://scenes/storm/lightningOutline.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/environment/treeEye.tscn" type="PackedScene" id=3]
+
+[node name="tree2" type="StaticBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -32.8079, 11.975, 16.6848, 13.968, 24.6568, 10.9785, 18.8439, -4.46722, -18.0265, -4.6333 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 3.75977, -66.3518 )
+texture = ExtResource( 1 )
+
+[node name="lightningOutline" parent="Sprite" instance=ExtResource( 2 )]
+
+[node name="treeEye" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2.14639, -13.093 )
+rotation = -0.262004

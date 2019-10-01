@@ -1,0 +1,73 @@
+{
+	"description": "",
+	"lines" : [
+		{
+			"speaker" : "Kevin",
+			"location" : "center_bottom",
+			"steps" : [
+					{
+						"text" : "Oh boy!!  It's her!!  Get out your camera!",
+						"time" : 0.05
+					}
+				]
+		},
+		{
+			"speaker" : "Sarah",
+			"location" : "center_bottom",
+			"steps" : [
+					{
+						"text" : "OK!!  I'll capture as much as i can.  What are you going to do?",
+						"time" : 0.05
+					}
+				]
+		},
+		{
+			"speaker" : "Kevin",
+			"location" : "center_bottom",
+			"steps" : [
+					{
+						"text" : "I'm going in for a closer look!  I wonder if I can make contact somehow!",
+						"time" : 0.05
+					}
+				]
+		},
+		{
+			"speaker" : "Sarah",
+			"location" : "center_bottom",
+			"steps" : [
+					{
+						"text" : "WHAT!!!",
+						"time" : 0.1
+					},
+					{
+						"text" : "  Are you ",
+						"time" : 0.05
+					},
+					{
+						"text" : "INSANE?!",
+						"time" : 0.25
+					}
+				]
+		},
+		{
+			"speaker" : "Kevin",
+			"location" : "center_bottom",
+			"steps" : [
+					{
+						"text" : "Of course not.  This is a chance of a lifetime and I'm taking it!",
+						"time" : 0.05
+					}
+				]
+		},
+		{
+			"speaker" : "Kevin",
+			"location" : "center_bottom",
+			"steps" : [
+					{
+						"text" : "I'm going in.  Just keep that camera rollin'!",
+						"time" : 0.05
+					}
+				]
+		}
+	]
+}

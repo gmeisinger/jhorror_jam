@@ -1,0 +1,25 @@
+{
+	"description": "The camera is now on Bob and shows him approach where the spirit is.  It attacks him and kills him.",
+	"lines" : [
+		{
+			"speaker" : "Sarah",
+			"location" : "center_left",
+			"steps" : [
+					{
+						"text" : "Kevin!!!  Oh no!!!  This is terrible!!",
+						"time" : 0.05
+					}
+				]
+		},
+		{
+			"speaker" : "Sarah",
+			"location" : "center_left",
+			"steps" : [
+					{
+						"text" : "I've got to get out of here!  Wait!  Could I get out that way?",
+						"time" : 0.05
+					}
+				]
+		}
+	]
+}

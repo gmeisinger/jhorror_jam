@@ -1,0 +1,25 @@
+{
+	"description": "The camera follows the characters to a tree they hide behind.  The camera pans over the the graves to show figures being revealed in the lightning.",
+	"lines" : [
+		{
+			"speaker" : "Kevin",
+			"location" : "lower_right",
+			"steps" : [
+					{
+						"text" : "See!!  There it is again!!  See it near that tombstone?",
+						"time" : 0.05
+					}
+				]
+		},
+		{
+			"speaker" : "Kevin",
+			"location" : "lower_right",
+			"steps" : [
+					{
+						"text" : "Must be something about this storm that makes it show up in the lightning.",
+						"time" : 0.05
+					}
+				]
+		}
+	]
+}
