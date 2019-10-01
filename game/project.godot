@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="The Eyeland"
+config/name="We Lost Jason"
 run/main_scene="res://scenes/levels/island.tscn"
 config/icon="res://icon.png"
 

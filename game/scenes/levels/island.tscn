@@ -104,6 +104,7 @@ speed = 85
 followDistance = 40
 targetPath = NodePath("../TopDownPlayer")
 spriteTexture = ExtResource( 12 )
+enabled = true
 
 [node name="Follower2" parent="YSort" instance=ExtResource( 11 )]
 position = Vector2( 25.355, -23.0685 )
@@ -111,6 +112,7 @@ speed = 75
 followDistance = 55
 targetPath = NodePath("../Follower")
 spriteTexture = ExtResource( 12 )
+enabled = true
 
 [node name="hud" parent="." instance=ExtResource( 13 )]
 
