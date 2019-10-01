@@ -24,11 +24,6 @@ func enabled_set(value):
 	else:
 		hide()
 
-func _physics_process(delta):
-	if not target: return
-	if is_following:
-		follow(delta)
-
 func follow(delta):
 	var move : Vector2 = (target.global_position - global_position)
 	var move_length = move.length()
