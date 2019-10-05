@@ -1,6 +1,7 @@
 tool
 extends KinematicBody2D
 
+
 export (int) var speed = 75
 export (int) var followDistance = 150
 export (NodePath) var targetPath
