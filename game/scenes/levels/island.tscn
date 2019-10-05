@@ -13,18 +13,18 @@
 [ext_resource path="res://scenes/follower/Follower.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/images/KevinWalk.png" type="Texture" id=12]
 [ext_resource path="res://scenes/enemy/pooMan.tscn" type="PackedScene" id=13]
-[ext_resource path="res://scenes/hud/hud.tscn" type="PackedScene" id=14]
-[ext_resource path="res://scenes/environment/van.tscn" type="PackedScene" id=15]
-[ext_resource path="res://scenes/environment/Fog.tscn" type="PackedScene" id=16]
-[ext_resource path="res://scenes/environment/vertTreeWall.tscn" type="PackedScene" id=17]
-[ext_resource path="res://scenes/environment/horzTreeWall.tscn" type="PackedScene" id=18]
-[ext_resource path="res://scenes/environment/tree1.tscn" type="PackedScene" id=19]
-[ext_resource path="res://scenes/environment/tree2.tscn" type="PackedScene" id=20]
-[ext_resource path="res://scenes/environment/tree3.tscn" type="PackedScene" id=21]
-[ext_resource path="res://scenes/environment/tree4.tscn" type="PackedScene" id=22]
-[ext_resource path="res://scenes/environment/tree5.tscn" type="PackedScene" id=23]
-[ext_resource path="res://scenes/environment/tree6.tscn" type="PackedScene" id=24]
-[ext_resource path="res://scenes/environment/tree7.tscn" type="PackedScene" id=25]
+[ext_resource path="res://scenes/environment/vertTreeWall.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/environment/horzTreeWall.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/environment/tree1.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/environment/tree2.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/environment/tree3.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/environment/tree4.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/environment/tree5.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/environment/tree6.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/environment/tree7.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenes/hud/hud.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/environment/van.tscn" type="PackedScene" id=24]
+[ext_resource path="res://scenes/environment/Fog.tscn" type="PackedScene" id=25]
 
 [node name="island" type="Node2D"]
 script = ExtResource( 1 )
@@ -116,225 +116,231 @@ spriteTexture = ExtResource( 12 )
 [node name="pooMan" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 125.701, -319.636 )
 
-[node name="hud" parent="." instance=ExtResource( 14 )]
+[node name="trees" type="YSort" parent="YSort"]
+position = Vector2( -614.046, -1853.01 )
 
-[node name="van" parent="." instance=ExtResource( 15 )]
-position = Vector2( 605.229, 2300.19 )
-
-[node name="Fog" parent="." instance=ExtResource( 16 )]
-visible = false
-position = Vector2( 1659.16, 1331.3 )
-
-[node name="trees" type="YSort" parent="."]
-editor/display_folded = true
-
-[node name="vertTreeWall" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 203.25, 1511.9 )
 
-[node name="vertTreeWall20" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall20" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 81.25, 1425.9 )
 
-[node name="vertTreeWall11" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall11" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 3701.25, 1529.9 )
 
-[node name="vertTreeWall4" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall4" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 203.25, 935.902 )
 
-[node name="vertTreeWall21" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall21" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 81.25, 849.902 )
 
-[node name="vertTreeWall27" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall27" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 81.25, 287.902 )
 
-[node name="vertTreeWall10" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall10" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 3701.25, 953.902 )
 
-[node name="vertTreeWall7" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall7" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 203.25, 357.902 )
 
-[node name="vertTreeWall12" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall12" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 3701.25, 375.902 )
 
-[node name="vertTreeWall19" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall19" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 3701.25, 175.902 )
 
-[node name="vertTreeWall2" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall2" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 203.302, 1689.28 )
 
-[node name="vertTreeWall22" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall22" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 81.302, 1603.28 )
 
-[node name="vertTreeWall16" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall16" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 3701.3, 1707.28 )
 
-[node name="vertTreeWall18" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall18" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 3701.3, 1908.28 )
 
-[node name="vertTreeWall5" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall5" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 203.302, 1113.28 )
 
-[node name="vertTreeWall23" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall23" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 81.302, 1027.28 )
 
-[node name="vertTreeWall28" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall28" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 81.302, 465.28 )
 
-[node name="vertTreeWall14" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall14" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 3701.3, 1131.28 )
 
-[node name="vertTreeWall8" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall8" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 203.302, 535.276 )
 
-[node name="vertTreeWall13" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall13" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 3701.3, 553.276 )
 
-[node name="vertTreeWall3" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall3" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 203.302, 1889.28 )
 
-[node name="vertTreeWall24" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall24" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 81.302, 1803.28 )
 
-[node name="vertTreeWall6" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall6" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 203.302, 1313.28 )
 
-[node name="vertTreeWall25" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall25" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 81.302, 1227.28 )
 
-[node name="vertTreeWall15" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall15" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 3701.3, 1331.28 )
 
-[node name="vertTreeWall9" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall9" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 203.302, 735.276 )
 
-[node name="vertTreeWall26" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall26" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 81.302, 649.276 )
 
-[node name="vertTreeWall29" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall29" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 81.302, 87.276 )
 
-[node name="vertTreeWall17" parent="trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall17" parent="YSort/trees" instance=ExtResource( 14 )]
 position = Vector2( 3701.3, 753.276 )
 
-[node name="horzTreeWall" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 350.338, 1880.41 )
 
-[node name="horzTreeWall2" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall2" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 831.822, 1894.38 )
 
-[node name="horzTreeWall20" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall20" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 831.413, 171.701 )
 
-[node name="horzTreeWall32" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall32" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 246.397, 172.096 )
 
-[node name="horzTreeWall8" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall8" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 2001.86, 1894.36 )
 
-[node name="horzTreeWall26" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall26" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 2001.45, 171.687 )
 
-[node name="horzTreeWall5" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall5" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 1416.82, 1894.38 )
 
-[node name="horzTreeWall27" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall27" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 1416.41, 171.701 )
 
-[node name="horzTreeWall11" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall11" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 2586.86, 1894.36 )
 
-[node name="horzTreeWall30" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall30" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 2586.45, 171.687 )
 
-[node name="horzTreeWall15" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall15" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 3171.86, 1894.36 )
 
-[node name="horzTreeWall23" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall23" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 3171.45, 171.687 )
 
-[node name="horzTreeWall3" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall3" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 1026.82, 1894.38 )
 
-[node name="horzTreeWall25" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall25" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 1026.41, 171.701 )
 
-[node name="horzTreeWall34" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall34" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 441.397, 172.096 )
 
-[node name="horzTreeWall10" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall10" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 2196.86, 1894.36 )
 
-[node name="horzTreeWall19" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall19" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 2196.45, 171.687 )
 
-[node name="horzTreeWall7" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall7" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 1611.82, 1894.38 )
 
-[node name="horzTreeWall29" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall29" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 1611.41, 171.701 )
 
-[node name="horzTreeWall13" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall13" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 2781.86, 1894.36 )
 
-[node name="horzTreeWall18" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall18" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 2781.45, 171.687 )
 
-[node name="horzTreeWall14" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall14" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 3366.86, 1894.36 )
 
-[node name="horzTreeWall22" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall22" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 3366.45, 171.687 )
 
-[node name="horzTreeWall4" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall4" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 1221.82, 1894.38 )
 
-[node name="horzTreeWall21" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall21" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 1221.41, 171.701 )
 
-[node name="horzTreeWall33" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall33" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 636.397, 172.096 )
 
-[node name="horzTreeWall9" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall9" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 2391.86, 1894.36 )
 
-[node name="horzTreeWall17" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall17" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 2391.45, 171.687 )
 
-[node name="horzTreeWall6" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall6" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 1806.82, 1894.38 )
 
-[node name="horzTreeWall28" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall28" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 1806.41, 171.701 )
 
-[node name="horzTreeWall12" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall12" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 2976.86, 1894.36 )
 
-[node name="horzTreeWall31" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall31" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 2976.45, 171.687 )
 
-[node name="horzTreeWall16" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall16" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 3561.86, 1894.36 )
 
-[node name="horzTreeWall24" parent="trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall24" parent="YSort/trees" instance=ExtResource( 15 )]
 position = Vector2( 3561.45, 171.687 )
 
-[node name="tree1" parent="trees" instance=ExtResource( 19 )]
-position = Vector2( 500.526, 1685.11 )
+[node name="tree1" parent="YSort/trees" instance=ExtResource( 16 )]
+position = Vector2( 398.283, 1630.58 )
 
-[node name="tree2" parent="trees" instance=ExtResource( 20 )]
-position = Vector2( 1223.02, 1669.62 )
+[node name="tree2" parent="YSort/trees" instance=ExtResource( 17 )]
+position = Vector2( 1082.15, 1624.18 )
 
-[node name="tree3" parent="trees" instance=ExtResource( 21 )]
+[node name="tree8" parent="YSort/trees" instance=ExtResource( 17 )]
+position = Vector2( 753.973, 1419.93 )
+
+[node name="tree3" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 399.046, 1738.79 )
 
-[node name="tree4" parent="trees" instance=ExtResource( 22 )]
+[node name="tree4" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 437.886, 1936.44 )
 
-[node name="tree5" parent="trees" instance=ExtResource( 23 )]
-position = Vector2( 938.005, 1713.59 )
+[node name="tree5" parent="YSort/trees" instance=ExtResource( 20 )]
+position = Vector2( 849.394, 1754.49 )
 
-[node name="tree6" parent="trees" instance=ExtResource( 24 )]
-position = Vector2( 993.822, 1475.68 )
+[node name="tree6" parent="YSort/trees" instance=ExtResource( 21 )]
+position = Vector2( 977.917, 1691.53 )
 
-[node name="tree7" parent="trees" instance=ExtResource( 25 )]
-position = Vector2( 360.682, 1541.42 )
+[node name="tree9" parent="YSort/trees" instance=ExtResource( 21 )]
+position = Vector2( 649.739, 1487.28 )
+
+[node name="tree7" parent="YSort/trees" instance=ExtResource( 22 )]
+position = Vector2( 526.543, 1539.15 )
+
+[node name="hud" parent="." instance=ExtResource( 23 )]
+
+[node name="van" parent="." instance=ExtResource( 24 )]
+position = Vector2( 605.229, 2300.19 )
+
+[node name="Fog" parent="." instance=ExtResource( 25 )]
+visible = false
+position = Vector2( 1659.16, 1331.3 )
 [connection signal="timeout" from="river_anim_timer" to="." method="_on_river_anim_timer_timeout"]
