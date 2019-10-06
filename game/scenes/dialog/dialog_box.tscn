@@ -20,7 +20,7 @@ Panel/styles/panelf = null
 Panel/styles/panelnc = null
 
 [sub_resource type="DynamicFont" id=3]
-size = 18
+size = 9
 extra_spacing_bottom = -12
 font_data = ExtResource( 5 )
 

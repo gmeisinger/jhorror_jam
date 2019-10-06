@@ -42,6 +42,14 @@ func _process(delta):
 	if active and Input.is_action_just_pressed("ui_accept"):
 		skip()
 
+func quick_message(msg : String, duration = 5.0):
+	buff_text(msg)
+	delay(duration)
+	show(rect_position)
+	output()
+	yield(tie, "buff_end")
+	hide()
+
 func play_script(script_name : String):
 	current_script = script_name
 	#load script
