@@ -3,7 +3,14 @@ extends "res://scenes/actor/npc.gd"
 
 var MAX_FOLLOW_DISTANCE = 500.0
 
+var follower_msg = "Watch out!"
+
+signal follower_msg(msg)
+
 onready var start_pos = global_position
+
+func _ready():
+	SignalMgr.register_publisher(self, "follower_msg")
 
 func _physics_process(delta):
 	if not target: return
@@ -30,6 +37,7 @@ func return_to_spawn(delta):
 func _on_VisibilityNotifier2D_screen_entered():
 	target = globals.get("player")
 	is_following = true
+	emit_signal("follower_msg", follower_msg)
 
 func _on_VisibilityNotifier2D_screen_exited():
 	is_following = false
