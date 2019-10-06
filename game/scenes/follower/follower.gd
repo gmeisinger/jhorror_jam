@@ -5,6 +5,7 @@ func _ready():
 	target = get_node(targetPath)
 	#sprite.texture = spriteTexture
 	globals.add_follower(self)
+	$speech_bubble.set_speaker(name)
 	#SignalMgr.register_subscriber(self, "follower_msg", "_on_follower_msg")
 
 func _physics_process(delta):

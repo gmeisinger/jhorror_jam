@@ -42,7 +42,8 @@ func _process(delta):
 	if active and Input.is_action_just_pressed("ui_accept"):
 		skip()
 
-func quick_message(msg : String, duration = 5.0):
+func quick_message(msg : String, duration = 3.0):
+	tie.reset()
 	buff_text(msg)
 	delay(duration)
 	show(rect_position)

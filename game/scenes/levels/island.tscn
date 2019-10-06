@@ -99,24 +99,25 @@ position = Vector2( -8.04431, -20.527 )
 [node name="TopDownPlayer" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( -41.1712, 7.8716 )
 
-[node name="Follower" parent="YSort" instance=ExtResource( 11 )]
+[node name="Tom" parent="YSort" instance=ExtResource( 11 )]
 position = Vector2( -3.10284, 1.50769 )
 speed = 85
 followDistance = 40
 targetPath = NodePath("../TopDownPlayer")
 spriteTexture = ExtResource( 12 )
 
-[node name="Follower2" parent="YSort" instance=ExtResource( 11 )]
+[node name="Mary" parent="YSort" instance=ExtResource( 11 )]
 position = Vector2( 25.355, -23.0685 )
 speed = 75
 followDistance = 55
-targetPath = NodePath("../Follower")
+targetPath = NodePath("../Tom")
 spriteTexture = ExtResource( 12 )
 
 [node name="pooMan" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 125.701, -319.636 )
 
 [node name="trees" type="YSort" parent="YSort"]
+editor/display_folded = true
 position = Vector2( -614.046, -1853.01 )
 
 [node name="vertTreeWall" parent="YSort/trees" instance=ExtResource( 14 )]
