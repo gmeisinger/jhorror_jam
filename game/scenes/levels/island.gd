@@ -14,8 +14,8 @@ func _ready():
 	SignalMgr.register_publisher(self, "FadeIn")
 	SignalMgr.register_subscriber(self, "follower_msg", "_on_follower_msg")
 	$YSort/TopDownPlayer.enabled = false
-	$YSort/Follower.enabled = false
-	$YSort/Follower2.enabled = false
+	$YSort/Tom.enabled = false
+	$YSort/Mary.enabled = false
 	$van.enabled = true
 	$van.start(Vector2($van.global_position.x, VAN_STOP_Y))
 	$hud.play_script("scene1")
@@ -37,8 +37,8 @@ func on_FadeOutFinished():
 	$van.enabled = false
 	$van.global_position = Vector2($van.global_position.x, VAN_STOP_Y)
 	$YSort/TopDownPlayer.enabled = true
-	$YSort/Follower.enabled = true
-	$YSort/Follower2.enabled = true
+	$YSort/Tom.enabled = true
+	$YSort/Mary.enabled = true
 	emit_signal("FadeIn")
 
 func _on_follower_msg(msg):
