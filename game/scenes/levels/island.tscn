@@ -341,6 +341,5 @@ position = Vector2( 526.543, 1539.15 )
 position = Vector2( 605.229, 2300.19 )
 
 [node name="Fog" parent="." instance=ExtResource( 25 )]
-visible = false
 position = Vector2( 1659.16, 1331.3 )
 [connection signal="timeout" from="river_anim_timer" to="." method="_on_river_anim_timer_timeout"]
