@@ -12,7 +12,7 @@ func _ready():
 	SignalMgr.register_subscriber(self, "script_complete", "on_ArrivedAtDestination")
 	SignalMgr.register_publisher(self, "FadeOut")
 	SignalMgr.register_publisher(self, "FadeIn")
-	SignalMgr.register_subscriber(self, "follower_msg", "_on_follower_msg")
+	SignalMgr.register_subscriber(self, "follower_msg", "follower_msg")
 	$YSort/TopDownPlayer.enabled = false
 	$YSort/Tom.enabled = false
 	$YSort/Mary.enabled = false
@@ -40,8 +40,9 @@ func on_FadeOutFinished():
 	$YSort/Tom.enabled = true
 	$YSort/Mary.enabled = true
 	emit_signal("FadeIn")
+	follower_msg("Jason! ... Jason, where ARE you!?")
 
-func _on_follower_msg(msg):
+func follower_msg(msg):
 	var followers = globals.get("followers")
 	var picked = followers[randi()%followers.size()]
 	picked.say(msg)
