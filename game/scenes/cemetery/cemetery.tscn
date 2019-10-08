@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://scenes/cemetery/cemetery.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/grass_tile_32x32.png" type="Texture" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://scenes/topDownPlayer/droneCamera.tscn" type="PackedScene" id=19]
 [ext_resource path="res://scenes/hud/hud.tscn" type="PackedScene" id=20]
 [ext_resource path="res://scenes/storm/lightningSpawner.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/transition/transitionArea.tscn" type="PackedScene" id=22]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 500, 120 )
@@ -267,7 +268,6 @@ __meta__ = {
 }
 
 [node name="topTrees" type="Node2D" parent="trees"]
-editor/display_folded = true
 position = Vector2( 513.857, 126.262 )
 __meta__ = {
 "_edit_lock_": true
@@ -632,3 +632,7 @@ position = Vector2( 494, 510 )
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="transitionArea" parent="." instance=ExtResource( 22 )]
+position = Vector2( 375.626, 339.606 )
+destination = "res://scenes/cave/cave.tscn"
