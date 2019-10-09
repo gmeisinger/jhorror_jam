@@ -26,6 +26,7 @@ SignalMgr="*res://addons/helperPack/SignalMgr.gd"
 transitionMgr="*res://utils/transitionMgr.tscn"
 soundTrackMgr="*res://utils/soundTrackMgr.tscn"
 game_init="*res://utils/game_init.gd"
+followerMgr="*res://scenes/follower/followerMgr.gd"
 
 [debug]
 
@@ -33,7 +34,7 @@ gdscript/warnings/enable=false
 
 [display]
 
-window/stretch/mode="viewport"
+window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
 [editor_plugins]

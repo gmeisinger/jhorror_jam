@@ -12,9 +12,11 @@ extents = Vector2( 10, 10.2913 )
 extents = Vector2( 11.9798, 19.2262 )
 
 [node name="Follower" type="KinematicBody2D"]
+collision_layer = 4
 script = ExtResource( 1 )
 speed = 125
 followDistance = 0
+follower_name = ""
 
 [node name="FeetCollisionShape" type="CollisionShape2D" parent="."]
 position = Vector2( -0.28479, 10.2525 )
@@ -35,3 +37,4 @@ texture = null
 [node name="speech_bubble" parent="." instance=ExtResource( 4 )]
 margin_top = -36.0
 margin_bottom = -36.0
+[connection signal="hiding" from="speech_bubble" to="." method="_on_speech_bubble_hiding"]
