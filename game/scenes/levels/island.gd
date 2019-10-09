@@ -2,6 +2,7 @@ extends Node2D
 
 signal FadeOut()
 signal FadeIn()
+signal follower_msg(msg)
 
 var has_skipped_cinematic
 const VAN_STOP_Y = 1950.0
@@ -12,10 +13,15 @@ func _ready():
 	SignalMgr.register_subscriber(self, "script_complete", "on_ArrivedAtDestination")
 	SignalMgr.register_publisher(self, "FadeOut")
 	SignalMgr.register_publisher(self, "FadeIn")
-	SignalMgr.register_subscriber(self, "follower_msg", "follower_msg")
-	$YSort/TopDownPlayer.enabled = false
-	$YSort/Tom.enabled = false
-	$YSort/Mary.enabled = false
+	SignalMgr.register_publisher(self, "follower_msg")
+	for child in $YSort/characters.get_children():
+		child.enabled = false
+	#$YSort/TopDownPlayer.enabled = false
+	var refs = []
+	refs.append($YSort/characters/follower1)
+	refs.append($YSort/characters/follower2)
+	followerMgr.set_refs(refs)
+	#$YSort/Mary.enabled = false
 	$van.enabled = true
 	$van.start(Vector2($van.global_position.x, VAN_STOP_Y))
 	$hud.play_script("scene1")
@@ -36,13 +42,8 @@ func on_ArrivedAtDestination(travel_to):
 func on_FadeOutFinished():
 	$van.enabled = false
 	$van.global_position = Vector2($van.global_position.x, VAN_STOP_Y)
-	$YSort/TopDownPlayer.enabled = true
-	$YSort/Tom.enabled = true
-	$YSort/Mary.enabled = true
+	for child in $YSort/characters.get_children():
+		child.enabled = true
 	emit_signal("FadeIn")
-	follower_msg("Jason! ... Jason, where ARE you!?")
+	emit_signal("follower_msg", "Jason! ... Jason, where ARE you!?")
 
-func follower_msg(msg):
-	var followers = globals.get("followers")
-	var picked = followers[randi()%followers.size()]
-	picked.say(msg)

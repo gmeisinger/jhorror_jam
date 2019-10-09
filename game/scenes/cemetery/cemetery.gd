@@ -1,12 +1,14 @@
 extends Node2D
 
+signal follower_msg(msg)
+
 onready var player = $YSort/TopDownPlayer
-onready var actor1 = $YSort/actor
-onready var actor2 = $YSort/actor2
+#onready var actor1 = $YSort/actor
+#onready var actor2 = $YSort/actor2
 onready var bottom_barrier_collision = $trees/bottomBarrier/StaticBody2D/CollisionShape2D
 onready var hud = $hud
 onready var dialog_box = $hud/dialog_box
-onready var scriptCamera = $scriptedSceneDroneCamera
+#onready var scriptCamera = $scriptedSceneDroneCamera
 onready var vengefulSpirit = $YSort/vengefulspirit
 onready var timer = $Timer
 onready var tween = $Tween
@@ -25,7 +27,24 @@ func _ready():
 	SignalMgr.register_publisher(self, "SpawnLightingHere")
 	SignalMgr.register_subscriber(self, "ActorArrived", "on_ActorArrived")
 	init_cemetery_spirits_array()
-	do_scripted_sequence()
+	#do_scripted_sequence()
+	player.enabled = true
+	place_followers()
+
+func place_followers():
+	var new_refs = []
+	var followers = followerMgr.followers
+	var offset = 50.0
+	var leader = player
+	for f in followers:
+		var follower = followerMgr.instance_follower(f)
+		follower.targetPath = leader.get_path()
+		$YSort.add_child(follower)
+		follower.global_position = player.global_position - Vector2(-offset, 0.0)
+		offset += 50.0
+		leader = follower
+		new_refs.append(follower)
+	followerMgr.set_refs(new_refs)
 
 func init_cemetery_spirits_array():
 	cemetery_spirits.append($YSort/cemeterySpirit)
@@ -49,12 +68,13 @@ func set_cemetery_spirits_visibility(visible: bool) -> void:
 
 
 var actor_arrived_counter : int = 0
+
 func on_ActorArrived(actor, move_to_position):
 	actor_arrived_counter += 1
 	if actor_arrived_counter > 1:
 		actor_arrived_counter = 0
 		emit_signal("BothActorsArrived")
-
+"""
 func do_scripted_sequence():
 	#initial setup
 	scriptCamera.global_position = $cameraStops/stop1.global_position
@@ -176,5 +196,11 @@ func do_scripted_sequence():
 	actor2.queue_free()
 	scriptCamera.current = false
 	player.enabled = true
-
+"""
 	
+
+
+func _on_Timer_timeout():
+	if !cemetery_spirits.empty():
+		cemetery_spirits.pop_front().visible = true
+	#else: they start attacking?

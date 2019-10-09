@@ -29,6 +29,7 @@ var current_script: String = ""
 
 signal next_step()
 signal script_complete(script_name)
+signal hiding()
 
 func _ready():
 	SignalMgr.register_publisher(self, "script_complete")
@@ -97,6 +98,7 @@ func hide():
 	$Tween.interpolate_property(self, "rect_scale", Vector2.ONE, Vector2.ZERO, 0.2, Tween.TRANS_LINEAR, Tween.EASE_IN)
 	$Tween.start()
 	tie.reset()
+	emit_signal("hiding")
 	active = false
 
 func show(pt : Vector2 = Vector2(0,0), new_speaker = ""):

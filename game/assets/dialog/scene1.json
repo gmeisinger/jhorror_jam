@@ -3,7 +3,7 @@
 	"args"	: 0,
 	"lines" : [
 		{
-			"speaker" : "Bob",
+			"speaker" : "Kevin",
 			"location" : "center_left",
 			"steps" : [
 				{
@@ -13,7 +13,7 @@
 					]
 				},
 		{
-				"speaker" : "Mary",
+				"speaker" : "Sarah",
 				"location" : "center_right",
 				"steps" : [
 					{
@@ -23,7 +23,7 @@
 						]
 					},
 		{
-			"speaker" : "Bob",
+			"speaker" : "Kevin",
 			"location" : "center_left",
 			"steps" : [
 				{
@@ -33,41 +33,41 @@
 					]
 				},
 		{
-				"speaker" : "Mary",
+				"speaker" : "Sarah",
 				"location" : "center_right",
 				"steps" : [
 					{
-						"text" : "Will the rain affect the drone?",
+						"text" : "I can't believe people believe in this junk.",
 						"time" : 0.05
 						}
 						]
 					},
 		{
-			"speaker" : "Bob",
+			"speaker" : "Kevin",
 			"location" : "center_left",
 			"steps" : [
 				{
-					"text" : "No.  It was made for this.  And the weather only helps.  This will look soo cool!",
+					"text" : "You'd be out of a job if they didn't...",
 					"time" : 0.05
 					}
 					]
 				},
 		{
-				"speaker" : "Mary",
+				"speaker" : "Sarah",
 				"location" : "center_right",
 				"steps" : [
 					{
-						"text" : "Are you sure this bridge is safe?",
+						"text" : "Hey, where's Jason?",
 						"time" : 0.05
 						}
 						]
 					},
 		{
-			"speaker" : "Bob",
+			"speaker" : "Kevin",
 			"location" : "center_left",
 			"steps" : [
 				{
-					"text" : "What? That sign back there?  Just people being over cautious.  They always make bridges like ten times stronger than needed.",
+					"text" : "What? W-What the hell!? He was just here! Quick, pull over!",
 					"time" : 0.05
 					}
 					]
