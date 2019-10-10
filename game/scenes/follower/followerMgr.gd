@@ -5,8 +5,14 @@ var follower_scn = load("res://scenes/follower/Follower.tscn")
 onready var followers = []
 onready var references = []
 
+var player_info
+onready var player_registered = false
+
 func _ready():
 	SignalMgr.register_subscriber(self, "follower_msg", "follower_msg")
+	SignalMgr.register_subscriber(self, "player_died", "_on_player_died")
+
+
 
 func register_follower(follower):
 	var info = FollowerInfo.new(follower.follower_name, follower.spriteTexture)
@@ -15,11 +21,21 @@ func register_follower(follower):
 			return
 	followers.append(info)
 
+func register_player(player):
+	player_info = FollowerInfo.new(player.character_name, player.get_sprite())
+	player_registered = true
+
+func player_name():
+	return player_info.follower_name
+
+func player_sprite():
+	return player_info.sprite
+
 func instance_follower(info):
 	var new_follower = follower_scn.instance()
 	new_follower.spriteTexture = info.sprite
 	new_follower.follower_name = info.follower_name
-	new_follower.speed = 90
+	new_follower.speed = 95
 	new_follower.followDistance = 40
 	references.append(new_follower)
 	return new_follower
@@ -35,7 +51,8 @@ func set_refs(refs):
 func get_refs():
 	return references
 
-func follower_msg(msg):
+func follower_msg(msg : String):
+	msg = msg.replace("PLAYER", player_name())
 	if references.empty(): return
 	print(references.size())
 	var found = false
@@ -44,7 +61,40 @@ func follower_msg(msg):
 		if !pick.speaking:
 			pick.say(msg)
 			found = true
-		
+
+func set_enabled_followers(set = false):
+	for ref in references:
+		ref.enabled = set
+
+func find_reference(fname : String):
+	for ref in references:
+		if ref.follower_name == fname:
+			return ref
+	return null
+
+func _on_player_died(player):
+	if followers.empty():
+		#game over
+		return
+	#player.visible = false
+	set_enabled_followers(false)
+	var next_info = followers.pop_front()
+	print(next_info.follower_name)
+	var next_player = find_reference(next_info.follower_name)
+	player.global_position = next_player.global_position
+	player.character_name = next_player.follower_name
+	player.set_sprite(next_info.sprite)
+	references.erase(next_player)
+	player.visible = true
+	player.enabled = true
+	set_enabled_followers(true)
+	follower_msg("Oh God! They got PLAYER!")
+	follower_msg("PLAYER...")
+	register_player(player)
+	follower_msg("PLAYER, get us out of here!")
+	if not followers.empty():
+		var needs_follow = find_reference(followers[0].follower_name)
+		needs_follow.target = player
 
 class FollowerInfo:
 	

@@ -85,6 +85,13 @@ toggle_performance={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="walls"
+2d_physics/layer_2="player"
+2d_physics/layer_3="enemies"
+2d_physics/layer_4="items"
+
 [rendering]
 
 quality/2d/use_pixel_snap=true

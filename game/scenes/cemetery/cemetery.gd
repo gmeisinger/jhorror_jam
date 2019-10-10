@@ -22,6 +22,7 @@ signal SpawnLightingHere(lighting_global_position)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	globals.set("current_scene", self)
 	SignalMgr.register_publisher(self, "FadeIn")
 	SignalMgr.register_publisher(self, "FadeOut")
 	SignalMgr.register_publisher(self, "SpawnLightingHere")

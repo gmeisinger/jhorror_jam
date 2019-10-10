@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sarahWalk.png-03996c5206cc855c3a408a9808f7494e.stex"
+path="res://.import/Tomwalk.png-3bf4d123f9b41ce1d360eb57696267e7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/sarahWalk.png"
-dest_files=[ "res://.import/sarahWalk.png-03996c5206cc855c3a408a9808f7494e.stex" ]
+source_file="res://assets/images/Tomwalk.png"
+dest_files=[ "res://.import/Tomwalk.png-3bf4d123f9b41ce1d360eb57696267e7.stex" ]
 
 [params]
 

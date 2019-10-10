@@ -8,6 +8,7 @@ var has_skipped_cinematic
 const VAN_STOP_Y = 1950.0
 
 func _ready():
+	globals.set("current_scene", self)
 	SignalMgr.register_subscriber(self, "ArrivedAtDestination", "on_ArrivedAtDestination")
 	SignalMgr.register_subscriber(self, "FadeOutFinished", "on_FadeOutFinished")
 	SignalMgr.register_subscriber(self, "script_complete", "on_ArrivedAtDestination")
@@ -20,6 +21,8 @@ func _ready():
 	var refs = []
 	refs.append($YSort/characters/follower1)
 	refs.append($YSort/characters/follower2)
+	refs.append($YSort/characters/follower3)
+	refs.append($YSort/characters/follower4)
 	followerMgr.set_refs(refs)
 	#$YSort/Mary.enabled = false
 	$van.enabled = true
@@ -46,4 +49,5 @@ func on_FadeOutFinished():
 		child.enabled = true
 	emit_signal("FadeIn")
 	emit_signal("follower_msg", "Jason! ... Jason, where ARE you!?")
+	emit_signal("follower_msg", "You go first, PLAYER.")
 
