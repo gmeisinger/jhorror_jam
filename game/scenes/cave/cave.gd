@@ -5,6 +5,7 @@ signal follower_msg(msg)
 onready var player = $YSort/TopDownPlayer
 
 func _ready():
+	globals.set("current_scene", self)
 	globals.get("player").get_node("droneCamera/rainManager").on_RainAmountChange("none")
 	place_followers()
 
