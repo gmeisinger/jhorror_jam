@@ -621,8 +621,9 @@ destination = "res://scenes/cave/cave.tscn"
 
 [node name="grave_gimmick" parent="." instance=ExtResource( 21 )]
 position = Vector2( 353.189, 686.269 )
-messages = "Does that grave have your name on it?
-We need to get out of here..."
+messages = "PLAYER, does that grave have your name on it?
+We need to get out of here...
+Here lies PLAYER..."
 shape = SubResource( 6 )
 
 [node name="screams" parent="." instance=ExtResource( 21 )]
