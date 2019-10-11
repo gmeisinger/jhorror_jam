@@ -34,6 +34,17 @@ func return_to_spawn(delta):
 	else:
 		target = null
 
+func kill(player):
+	target = null
+	$hitbox/CollisionShape2D.disabled = true
+	$kill_sprite.global_position = player.global_position
+	$kill_sprite/victim.texture = player.get_sprite()
+	$kill_sprite/victim.show()
+	$kill_sprite.visible = true
+	$"3DirSprite".visible = false
+	$kill_sprite/AnimationPlayer.play("kill")
+	return $kill_sprite/AnimationPlayer
+
 func _on_VisibilityNotifier2D_screen_entered():
 	target = globals.get("player")
 	is_following = true
@@ -42,3 +53,7 @@ func _on_VisibilityNotifier2D_screen_entered():
 func _on_VisibilityNotifier2D_screen_exited():
 	is_following = false
 
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	queue_free()

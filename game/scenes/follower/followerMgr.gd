@@ -72,19 +72,26 @@ func find_reference(fname : String):
 			return ref
 	return null
 
-func _on_player_died(player):
+func _on_player_died(player, enemy):
+	
 	if followers.empty():
 		#game over
 		return
-	#player.visible = false
-	set_enabled_followers(false)
+	player.hide()
+	#set_enabled_followers(false)
 	var next_info = followers.pop_front()
-	print(next_info.follower_name)
+
+	#kill animation
+	var kill_anim = enemy.kill(player)
+	#yield(kill_anim, "animation_finished")
+	#enemy.queue_free()
+	# move player
 	var next_player = find_reference(next_info.follower_name)
 	player.global_position = next_player.global_position
 	player.character_name = next_player.follower_name
 	player.set_sprite(next_info.sprite)
 	references.erase(next_player)
+	next_player.queue_free()
 	player.visible = true
 	player.enabled = true
 	set_enabled_followers(true)

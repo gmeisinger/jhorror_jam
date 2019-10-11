@@ -21,7 +21,7 @@ export var enabled : bool = true setget enabled_set
 
 onready var anim_player : AnimationPlayer = $"3DirSprite/AnimationPlayer"
 
-signal player_died(player)
+signal player_died(player, enemy)
 
 func _ready():
 	SignalMgr.register_publisher(self, "player_died")
@@ -38,6 +38,7 @@ func _ready():
 
 func set_sprite(tex):
 	$"3DirSprite".texture = tex
+
 
 func enabled_set(value):
 	enabled = value
@@ -111,8 +112,9 @@ func directional_animation(dir):
 func _on_HitBox_area_entered(area):
 	if area.get_collision_layer_bit(2) and enabled:
 		#enemy
+		var enemy = area.get_parent()
 		enabled = false
-		emit_signal("player_died", self)
+		emit_signal("player_died", self, enemy)
 
 func become_invincible(time = 4.0):
 	$HitBox/CollisionShape2D.disabled = true

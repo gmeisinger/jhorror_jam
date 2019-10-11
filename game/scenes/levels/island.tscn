@@ -10,10 +10,10 @@
 [ext_resource path="res://scenes/environment/bridge.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/topDownPlayer/TopDownPlayer.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/follower/Follower.tscn" type="PackedScene" id=10]
-[ext_resource path="res://assets/images/sarahWalk.png" type="Texture" id=11]
-[ext_resource path="res://assets/images/Kellywalk.png" type="Texture" id=12]
-[ext_resource path="res://assets/images/Tomwalk.png" type="Texture" id=13]
-[ext_resource path="res://assets/images/dalewalk.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/Kellywalk.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/Tomwalk.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/dalewalk.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/sarahWalk.png" type="Texture" id=14]
 [ext_resource path="res://scenes/environment/gateOfHeaven.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/environment/vertTreeWall.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scenes/environment/horzTreeWall.tscn" type="PackedScene" id=17]
@@ -108,23 +108,23 @@ position = Vector2( 614.046, 1853.01 )
 position = Vector2( 1173.16, -787.05 )
 
 [node name="follower1" parent="YSort/characters" instance=ExtResource( 10 )]
-position = Vector2( 1088.67, -745.73 )
+position = Vector2( 1214.42, -709.98 )
 speed = 95
 followDistance = 45
 targetPath = NodePath("../TopDownPlayer")
 spriteTexture = ExtResource( 11 )
-follower_name = "Sarah"
-
-[node name="follower2" parent="YSort/characters" instance=ExtResource( 10 )]
-position = Vector2( 1214.42, -709.98 )
-speed = 95
-followDistance = 45
-targetPath = NodePath("../follower1")
-spriteTexture = ExtResource( 12 )
 follower_name = "Kelly"
 
-[node name="follower3" parent="YSort/characters" instance=ExtResource( 10 )]
+[node name="follower2" parent="YSort/characters" instance=ExtResource( 10 )]
 position = Vector2( 1221.57, -823.106 )
+speed = 95
+followDistance = 40
+targetPath = NodePath("../follower1")
+spriteTexture = ExtResource( 12 )
+follower_name = "Dale"
+
+[node name="follower3" parent="YSort/characters" instance=ExtResource( 10 )]
+position = Vector2( 1284.02, -760.099 )
 speed = 95
 followDistance = 40
 targetPath = NodePath("../follower2")
@@ -132,12 +132,12 @@ spriteTexture = ExtResource( 13 )
 follower_name = "Tom"
 
 [node name="follower4" parent="YSort/characters" instance=ExtResource( 10 )]
-position = Vector2( 1284.02, -760.099 )
+position = Vector2( 1088.67, -745.73 )
 speed = 95
-followDistance = 40
+followDistance = 45
 targetPath = NodePath("../follower3")
 spriteTexture = ExtResource( 14 )
-follower_name = "Dale"
+follower_name = "Sarah"
 
 [node name="gateOfHeaven" parent="YSort" instance=ExtResource( 15 )]
 position = Vector2( -8.04431, -20.527 )
