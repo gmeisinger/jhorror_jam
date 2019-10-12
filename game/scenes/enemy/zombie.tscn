@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/enemy/pooMan.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/images/zombieSheet.png" type="Texture" id=2]
+
+[node name="zombie" instance=ExtResource( 1 )]
+spriteTexture = ExtResource( 2 )
+
+[node name="3DirSprite" parent="." index="3"]
+texture = ExtResource( 2 )
+vframes = 7
+hframes = 6
+frame = 36
