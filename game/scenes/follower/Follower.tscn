@@ -12,7 +12,7 @@ extents = Vector2( 10, 10.2913 )
 extents = Vector2( 11.9798, 19.2262 )
 
 [node name="Follower" type="KinematicBody2D"]
-collision_layer = 4
+collision_layer = 0
 script = ExtResource( 1 )
 speed = 125
 followDistance = 0

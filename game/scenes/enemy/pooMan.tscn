@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://scenes/enemy/enemy.gd" type="Script" id=1]
+[ext_resource path="res://scenes/enemy/pooMan.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/pooWalk.png" type="Texture" id=2]
 [ext_resource path="res://scenes/storm/lightningOutline.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/images/pooDeath.png" type="Texture" id=4]
@@ -116,9 +116,9 @@ tracks/3/keys = {
 }
 
 [node name="pooMan" type="KinematicBody2D"]
+collision_layer = 0
 script = ExtResource( 1 )
-speed = 50
-followDistance = 10
+followDistance = 0
 spriteTexture = ExtResource( 2 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]

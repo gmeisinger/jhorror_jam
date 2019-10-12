@@ -30,6 +30,7 @@ func _ready():
 	x_speed = 0
 	y_speed = 0
 	globals.set("player", self)
+	globals.set("has_key", true)
 	if followerMgr.player_registered:
 		character_name = followerMgr.player_name()
 		set_sprite(followerMgr.player_sprite())
