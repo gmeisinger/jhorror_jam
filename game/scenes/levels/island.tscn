@@ -35,7 +35,7 @@
 [ext_resource path="res://scenes/environment/Fog.tscn" type="PackedScene" id=33]
 [ext_resource path="res://scenes/transition/transitionArea.tscn" type="PackedScene" id=34]
 [ext_resource path="res://scenes/hints/hint_trigger.tscn" type="PackedScene" id=35]
-[ext_resource path="res://BackgroundAudioTrigger.gd" type="Script" id=36]
+[ext_resource path="res://scenes/audio/BackgroundAudioTrigger.gd" type="Script" id=36]
 [ext_resource path="res://assets/sounds/spooky_ambience.ogg" type="AudioStream" id=37]
 
 [sub_resource type="CircleShape2D" id=1]

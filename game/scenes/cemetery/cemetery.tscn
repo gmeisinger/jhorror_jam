@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://scenes/cemetery/cemetery.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/grass_tile_32x32.png" type="Texture" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://scenes/storm/lightningSpawner.tscn" type="PackedScene" id=19]
 [ext_resource path="res://scenes/transition/transitionArea.tscn" type="PackedScene" id=20]
 [ext_resource path="res://scenes/hints/hint_trigger.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/environment/Fog.tscn" type="PackedScene" id=22]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 500, 120 )
@@ -633,4 +634,6 @@ What the fuck!?
 Everyone RUN!"
 wait_time = 30.0
 message_count = 3
+
+[node name="Fog" parent="." instance=ExtResource( 22 )]
 [connection signal="timeout" from="ghost_timer" to="." method="_on_Timer_timeout"]
