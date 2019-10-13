@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://scenes/levels/island.gd" type="Script" id=1]
 [ext_resource path="res://scenes/storm/lightningSpawner.tscn" type="PackedScene" id=2]
@@ -29,11 +29,12 @@
 [ext_resource path="res://scenes/enemy/pooMan.tscn" type="PackedScene" id=27]
 [ext_resource path="res://scenes/enemy/zombie.tscn" type="PackedScene" id=28]
 [ext_resource path="res://scenes/environment/gate.tscn" type="PackedScene" id=29]
-[ext_resource path="res://scenes/hud/hud.tscn" type="PackedScene" id=30]
-[ext_resource path="res://scenes/environment/van.tscn" type="PackedScene" id=31]
-[ext_resource path="res://scenes/environment/Fog.tscn" type="PackedScene" id=32]
-[ext_resource path="res://scenes/transition/transitionArea.tscn" type="PackedScene" id=33]
-[ext_resource path="res://scenes/hints/hint_trigger.tscn" type="PackedScene" id=34]
+[ext_resource path="res://scenes/key/key.tscn" type="PackedScene" id=30]
+[ext_resource path="res://scenes/hud/hud.tscn" type="PackedScene" id=31]
+[ext_resource path="res://scenes/environment/van.tscn" type="PackedScene" id=32]
+[ext_resource path="res://scenes/environment/Fog.tscn" type="PackedScene" id=33]
+[ext_resource path="res://scenes/transition/transitionArea.tscn" type="PackedScene" id=34]
+[ext_resource path="res://scenes/hints/hint_trigger.tscn" type="PackedScene" id=35]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 300.0
@@ -55,7 +56,7 @@ __meta__ = {
 }
 
 [node name="path" parent="." instance=ExtResource( 4 )]
-tile_data = PoolIntArray( 393257, 0, 0, 393264, 0, 0, 589861, 0, 0, 720930, 0, 0, 851999, 0, 0, 917533, 0, 0, 1048603, 0, 0, 1179666, 0, 0, 1179673, 0, 0, 1245206, 0, 0, 1310738, 0, 0, 1376271, 0, 0, 1441804, 0, 0, 1572874, 0, 0, 1703944, 0, 0 )
+tile_data = PoolIntArray( 393257, 0, 0, 393264, 0, 0, 589861, 0, 0, 655377, 0, 0, 655380, 0, 0, 720930, 0, 0, 851986, 0, 0, 851999, 0, 0, 917533, 0, 0, 1048603, 0, 0, 1179666, 0, 0, 1179673, 0, 0, 1245206, 0, 0, 1310738, 0, 0, 1376271, 0, 0, 1441804, 0, 0, 1572874, 0, 0, 1703944, 0, 0 )
 
 [node name="cliff_face" type="Sprite" parent="."]
 position = Vector2( 607.034, 2014.35 )
@@ -533,20 +534,23 @@ position = Vector2( 2881.14, -1261.6 )
 [node name="gate" parent="YSort" instance=ExtResource( 29 )]
 position = Vector2( 2704.47, -1650.55 )
 
-[node name="hud" parent="." instance=ExtResource( 30 )]
+[node name="key" parent="YSort" instance=ExtResource( 30 )]
+position = Vector2( 461.609, -1204.18 )
 
-[node name="van" parent="." instance=ExtResource( 31 )]
+[node name="hud" parent="." instance=ExtResource( 31 )]
+
+[node name="van" parent="." instance=ExtResource( 32 )]
 position = Vector2( 605.229, 2300.19 )
 
-[node name="Fog" parent="." instance=ExtResource( 32 )]
+[node name="Fog" parent="." instance=ExtResource( 33 )]
 visible = false
 position = Vector2( 1972.8, 1063.96 )
 
-[node name="to_cemetery" parent="." instance=ExtResource( 33 )]
+[node name="to_cemetery" parent="." instance=ExtResource( 34 )]
 position = Vector2( 3320.97, 239.161 )
 destination = "res://scenes/cemetery/cemetery.tscn"
 
-[node name="hint1" parent="." instance=ExtResource( 34 )]
+[node name="hint1" parent="." instance=ExtResource( 35 )]
 position = Vector2( 1272.39, 1394.67 )
 messages = "The bathrooms are just north of here. Jason better be there!
 Let's check the bathrooms north of here!"

@@ -1,13 +1,56 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/enemy/pooMan.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/images/zombieSheet.png" type="Texture" id=2]
+[ext_resource path="res://scenes/enemy/zombie.gd" type="Script" id=2]
+[ext_resource path="res://assets/images/zombieSheet.png" type="Texture" id=3]
 
-[node name="zombie" instance=ExtResource( 1 )]
-spriteTexture = ExtResource( 2 )
+[sub_resource type="Animation" id=2]
+resource_name = "despawn"
+length = 1.7
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 58, 57, 56, 55, 54, 53, 52, 51, 50, 49, 48, 47, 46, 45, 44, 43, 42 ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "spawn"
+length = 1.7
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58 ]
+}
+
+[node name="zombie" index="0" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+followDistance = 150
+spriteTexture = null
 
 [node name="3DirSprite" parent="." index="3"]
-texture = ExtResource( 2 )
-vframes = 7
+texture = ExtResource( 3 )
+vframes = 10
 hframes = 6
-frame = 36
+frame = 42
+
+[node name="AnimationPlayer" parent="3DirSprite" index="0"]
+anims/despawn = SubResource( 2 )
+anims/spawn = SubResource( 1 )
+
+[node name="lifetime" type="Timer" parent="." index="5"]
+[connection signal="animation_finished" from="3DirSprite/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="lifetime" to="." method="_on_lifetime_timeout"]

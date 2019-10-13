@@ -1,5 +1,7 @@
 extends "res://scenes/enemy/enemy.gd"
 
+
+
 func _physics_process(delta):
 	if not target: return
 	if is_following:
@@ -21,3 +23,5 @@ func kill(player):
 	$"3DirSprite".visible = false
 	$kill_sprite/AnimationPlayer.play("kill")
 	return $kill_sprite/AnimationPlayer
+
+
