@@ -27,6 +27,7 @@ transitionMgr="*res://utils/transitionMgr.tscn"
 soundTrackMgr="*res://utils/soundTrackMgr.tscn"
 game_init="*res://utils/game_init.gd"
 followerMgr="*res://scenes/follower/followerMgr.gd"
+BackgroundMusic="*res://BackgroundMusic.tscn"
 
 [debug]
 
