@@ -1,0 +1,24 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[sub_resource type="Shader" id=3]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+uniform float amount : hint_range(0.0, 20.0);
+uniform float scale : hint_range(0.05, 2.0);
+
+void fragment(){
+	
+	vec2 uv = UV*scale;
+	float a = fract(sin(dot(uv, vec2(50, 500)))*20.0);
+	vec4 col = texture(TEXTURE, UV);
+	
+	col.a *= pow(a, amount);
+	
+	COLOR = col;
+	}"
+
+[resource]
+shader = SubResource( 3 )
+shader_param/amount = 0.506
+shader_param/scale = 0.089
