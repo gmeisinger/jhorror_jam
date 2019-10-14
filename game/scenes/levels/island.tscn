@@ -1,40 +1,43 @@
-[gd_scene load_steps=37 format=2]
+
+[gd_scene load_steps=36 format=2]
+
 
 [ext_resource path="res://scenes/levels/island.gd" type="Script" id=1]
 [ext_resource path="res://scenes/storm/lightningSpawner.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/images/grass_tile_32x32.png" type="Texture" id=3]
 [ext_resource path="res://scenes/environment/path.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/images/cliff_face.png" type="Texture" id=5]
-[ext_resource path="res://assets/images/river_anim.png" type="Texture" id=6]
-[ext_resource path="res://assets/images/trees_opening_background.png" type="Texture" id=7]
-[ext_resource path="res://assets/images/river_bank_foreground.png" type="Texture" id=8]
-[ext_resource path="res://scenes/environment/bridge.tscn" type="PackedScene" id=9]
-[ext_resource path="res://scenes/topDownPlayer/TopDownPlayer.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/follower/Follower.tscn" type="PackedScene" id=11]
-[ext_resource path="res://assets/images/Kellywalk.png" type="Texture" id=12]
-[ext_resource path="res://assets/images/Tomwalk.png" type="Texture" id=13]
-[ext_resource path="res://assets/images/dalewalk.png" type="Texture" id=14]
-[ext_resource path="res://assets/images/sarahWalk.png" type="Texture" id=15]
-[ext_resource path="res://scenes/environment/gateOfHeaven.tscn" type="PackedScene" id=16]
-[ext_resource path="res://scenes/environment/vertTreeWall.tscn" type="PackedScene" id=17]
-[ext_resource path="res://scenes/environment/horzTreeWall.tscn" type="PackedScene" id=18]
-[ext_resource path="res://scenes/environment/tree1.tscn" type="PackedScene" id=19]
-[ext_resource path="res://scenes/environment/tree2.tscn" type="PackedScene" id=20]
-[ext_resource path="res://scenes/environment/tree3.tscn" type="PackedScene" id=21]
-[ext_resource path="res://scenes/environment/tree4.tscn" type="PackedScene" id=22]
-[ext_resource path="res://scenes/environment/tree5.tscn" type="PackedScene" id=23]
-[ext_resource path="res://scenes/environment/tree6.tscn" type="PackedScene" id=24]
-[ext_resource path="res://scenes/environment/tree7.tscn" type="PackedScene" id=25]
-[ext_resource path="res://scenes/environment/latrine.tscn" type="PackedScene" id=26]
-[ext_resource path="res://scenes/enemy/pooMan.tscn" type="PackedScene" id=27]
-[ext_resource path="res://scenes/enemy/zombie.tscn" type="PackedScene" id=28]
+
+[ext_resource path="res://environment_tileset.tres" type="TileSet" id=5]
+[ext_resource path="res://assets/images/cliff_face.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/river_anim.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/trees_opening_background.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/river_bank_foreground.png" type="Texture" id=9]
+[ext_resource path="res://scenes/environment/bridge.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/topDownPlayer/TopDownPlayer.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/follower/Follower.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/images/Kellywalk.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/Tomwalk.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/dalewalk.png" type="Texture" id=15]
+[ext_resource path="res://assets/images/sarahWalk.png" type="Texture" id=16]
+[ext_resource path="res://scenes/environment/gateOfHeaven.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/environment/vertTreeWall.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/environment/horzTreeWall.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/environment/tree1.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/environment/tree2.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/environment/tree3.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenes/environment/tree4.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/environment/tree5.tscn" type="PackedScene" id=24]
+[ext_resource path="res://scenes/environment/tree6.tscn" type="PackedScene" id=25]
+[ext_resource path="res://scenes/environment/tree7.tscn" type="PackedScene" id=26]
+[ext_resource path="res://scenes/environment/latrine.tscn" type="PackedScene" id=27]
+[ext_resource path="res://scenes/enemy/pooMan.tscn" type="PackedScene" id=28]
 [ext_resource path="res://scenes/environment/gate.tscn" type="PackedScene" id=29]
-[ext_resource path="res://scenes/key/key.tscn" type="PackedScene" id=30]
-[ext_resource path="res://scenes/hud/hud.tscn" type="PackedScene" id=31]
-[ext_resource path="res://scenes/environment/van.tscn" type="PackedScene" id=32]
-[ext_resource path="res://scenes/environment/Fog.tscn" type="PackedScene" id=33]
-[ext_resource path="res://scenes/transition/transitionArea.tscn" type="PackedScene" id=34]
-[ext_resource path="res://scenes/hints/hint_trigger.tscn" type="PackedScene" id=35]
+[ext_resource path="res://scenes/hud/hud.tscn" type="PackedScene" id=30]
+[ext_resource path="res://scenes/environment/van.tscn" type="PackedScene" id=31]
+[ext_resource path="res://scenes/environment/Fog.tscn" type="PackedScene" id=32]
+[ext_resource path="res://scenes/transition/transitionArea.tscn" type="PackedScene" id=33]
+[ext_resource path="res://scenes/hints/hint_trigger.tscn" type="PackedScene" id=34]
+
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 300.0
@@ -56,32 +59,35 @@ __meta__ = {
 }
 
 [node name="path" parent="." instance=ExtResource( 4 )]
-tile_data = PoolIntArray( 393257, 0, 0, 393264, 0, 0, 589861, 0, 0, 655377, 0, 0, 655380, 0, 0, 720930, 0, 0, 851986, 0, 0, 851999, 0, 0, 917533, 0, 0, 1048603, 0, 0, 1179666, 0, 0, 1179673, 0, 0, 1245206, 0, 0, 1310738, 0, 0, 1376271, 0, 0, 1441804, 0, 0, 1572874, 0, 0, 1703944, 0, 0 )
+
+tile_set = ExtResource( 5 )
+tile_data = PoolIntArray( 393257, 0, 0, 393264, 0, 0, 589861, 0, 0, 720927, 25, 0, 720930, 0, 0, 851999, 0, 0, 852000, 25, 0, 917533, 0, 0, 1048603, 0, 0, 1179666, 0, 0, 1179673, 0, 0, 1245206, 0, 0, 1310738, 0, 0, 1376271, 0, 0, 1441804, 0, 0, 1572874, 0, 0, 1703944, 0, 0 )
+
 
 [node name="cliff_face" type="Sprite" parent="."]
 position = Vector2( 607.034, 2014.35 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="cliff_face2" type="Sprite" parent="."]
 position = Vector2( 1199.95, 2021.03 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="cliff_face3" type="Sprite" parent="."]
 position = Vector2( 35.8314, 2009.34 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="river_anim" type="Sprite" parent="."]
 position = Vector2( 604.232, 2154.16 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 vframes = 6
 frame = 5
 __meta__ = {
@@ -95,13 +101,13 @@ autostart = true
 [node name="trees_opening_background" type="Sprite" parent="river_anim_timer"]
 visible = false
 position = Vector2( 613.575, 1729.4 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
 [node name="river_bank_foreground" type="Sprite" parent="."]
 position = Vector2( 604.05, 2332.04 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 
-[node name="bridge" parent="." instance=ExtResource( 9 )]
+[node name="bridge" parent="." instance=ExtResource( 10 )]
 position = Vector2( 606.887, 1950 )
 board_count = 25
 spacing = -2.0
@@ -109,451 +115,460 @@ spacing = -2.0
 [node name="YSort" type="YSort" parent="."]
 position = Vector2( 614.046, 1853.01 )
 
+[node name="EnvTileMap" type="TileMap" parent="YSort"]
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 16, 16 )
+cell_y_sort = true
+format = 1
+tile_data = PoolIntArray( -6750026, 13, 0, -6750021, 16, 0, -6750013, 15, 0, -6750010, 15, 0, -6684552, 14, 0, -6684524, 13, 0, -6684492, 16, 0, -6684486, 16, 0, -6684482, 16, 0, -6684479, 13, 0, -6684478, 16, 0, -6684476, 15, 0, -6619023, 13, 0, -6619019, 13, 0, -6619007, 5, 0, -6618954, 13, 0, -6618941, 15, 0, -6618939, 15, 0, -6553527, 6, 0, -6553477, 5, 0, -6553476, 14, 0, -6553446, 13, 0, -6488022, 4, 0, -6488011, 4, 0, -6487948, 10, 0, -6487944, 17, 0, -6487931, 17, 0, -6487919, 5, 0, -6487915, 22, 0, -6487912, 4, 0, -6487901, 4, 0, -6487883, 16, 0, -6487882, 15, 0, -6487878, 13, 0, -6487876, 16, 0, -6487874, 15, 0, -6422485, 4, 0, -6422475, 9, 0, -6422468, 12, 0, -6422410, 3, 0, -6422394, 21, 0, -6422368, 16, 0, -6422340, 15, 0, -6422338, 16, 0, -6356939, 12, 0, -6356938, 9, 0, -6356931, 12, 0, -6356917, 23, 0, -6356837, 16, 0, -6356835, 15, 0, -6356806, 15, 0, -6356800, 15, 0, -6356797, 4, 0, -6291311, 15, 0, -6291310, 16, 0, -6291299, 15, 0, -6225869, 13, 0, -6225767, 15, 0, -6225725, 4, 0, -6160347, 7, 0, -6160344, 7, 0, -6160323, 9, 0, -6160321, 7, 0, -6160320, 7, 0, -6160311, 12, 0, -6094813, 7, 0, -6094786, 9, 0, -6094777, 12, 0, -6094750, 13, 0, -6094657, 15, 0, -6094646, 23, 0, -6029241, 21, 0, -6029214, 13, 0, -6029198, 1, 0, -6029122, 15, 0, -6029120, 16, 0, -6029115, 21, 0, -5963751, 4, 0, -5963721, 16, 0, -5963718, 15, 0, -5963706, 10, 0, -5963692, 4, 0, -5963576, 23, 0, -5898213, 23, 0, -5898184, 13, 0, -5898183, 15, 0, -5898181, 16, 0, -5898168, 6, 0, -5898163, 4, 0, -5898135, 23, 0, -5898132, 10, 0, -5898124, 21, 0, -5832646, 15, 0, -5767142, 10, 0, -5767140, 12, 0, -5767139, 7, 0, -5767067, 13, 0, -5701605, 7, 0, -5701577, 16, 0, -5701558, 4, 0, -5701557, 4, 0, -5701532, 13, 0, -5701525, 13, 0, -5701518, 5, 0, -5636067, 7, 0, -5636041, 14, 0, -5636018, 4, 0, -5635991, 21, 0, -5635985, 13, 0, -5570503, 14, 0, -5570484, 4, 0, -5570375, 7, 0, -5570373, 10, 0, -5570372, 23, 0, -5570370, 21, 0, -5504838, 10, 0, -5439300, 9, 0, -5439299, 6, 0, -5439297, 7, 0, -5439295, 7, 0, -5373939, 4, 0, -5373765, 9, 0, -5373760, 13, 0, -5308405, 4, 0, -5308310, 5, 0, -5308225, 9, 0, -5308222, 4, 0, -5308218, 21, 0, -5242773, 14, 0, -5177245, 23, 0, -5177236, 5, 0, -5111795, 2, 0, -5111715, 4, 0, -5046252, 23, 0, -5046171, 20, 0, -5046169, 21, 0, -4980724, 21, 0, -4980684, 14, 0, -4980638, 4, 0, -4980635, 3, 0, -4915147, 14, 0, -4783960, 4, 0, -4783935, 5, 0, -4718400, 5, 0, -4652864, 14, 0, -4652863, 5, 0, -4587509, 21, 0, -4587331, 5, 0, -4587327, 14, 0, -4587326, 18, 0, -4521792, 2, 0, -4521787, 23, 0, -4521785, 4, 0, -4456263, 16, 0, -4456258, 3, 0, -4390726, 16, 0, -4325192, 15, 0, -4259833, 23, 0, -4259686, 4, 0, -4194291, 7, 0, -4194290, 12, 0, -4194289, 10, 0, -4194287, 3, 0, -4128759, 21, 0, -4128753, 10, 0, -4063160, 14, 0, -4063102, 9, 0, -4063097, 16, 0, -4063064, 16, 0, -3997591, 8, 0, -3997559, 15, 0, -3997558, 16, 0, -3997531, 16, 0, -3997529, 16, 0, -3997527, 15, 0, -3932031, 15, 0, -3932025, 15, 0, -3866525, 7, 0, -3866507, 21, 0, -3866494, 15, 0, -3866457, 21, 0, -3800991, 6, 0, -3800990, 10, 0, -3800988, 7, 0, -3800982, 8, 0, -3800921, 16, 0, -3800919, 15, 0, -3735454, 7, 0, -3735453, 6, 0, -3735423, 12, 0, -3735386, 15, 0, -3735383, 15, 0, -3735380, 3, 0, -3735363, 3, 0, -3669914, 7, 0, -3669888, 12, 0, -3669848, 15, 0, -3669846, 16, 0, -3669843, 15, 0, -3669827, 13, 0, -3604379, 8, 0, -3604350, 9, 0, -3604310, 15, 0, -3604297, 15, 0, -3604296, 16, 0, -3604294, 21, 0, -3538847, 21, 0, -3538762, 16, 0, -3538760, 15, 0, -3473227, 15, 0, -3407691, 15, 0, -3276767, 6, 0, -3276739, 10, 0, -3276691, 8, 0, -3211247, 13, 0, -3211230, 7, 0, -3211219, 10, 0, -3211208, 6, 0, -3211123, 7, 0, -3145720, 14, 0, -3145705, 13, 0, -3145695, 7, 0, -3145680, 14, 0, -3145666, 12, 0, -3145589, 6, 0, -3145588, 7, 0, -3145584, 7, 0, -3145568, 4, 0, -3080133, 6, 0, -3080054, 6, 0, -3080052, 10, 0, -3080050, 12, 0, -3080039, 21, 0, -3080036, 16, 0, -3014654, 14, 0, -3014639, 13, 0, -3014630, 14, 0, -3014605, 14, 0, -3014603, 10, 0, -3014515, 10, 0, -3014512, 6, 0, -3014466, 23, 0, -2949090, 21, 0, -2949068, 6, 0, -2949010, 21, 0, -2949005, 16, 0, -2948977, 6, 0, -2948956, 13, 0, -2883500, 16, 0, -2883498, 15, 0, -2883398, 20, 0, -2817964, 15, 0, -2817963, 16, 0, -2817937, 16, 0, -2817934, 2, 0, -2817892, 16, 0, -2817889, 16, 0, -2752400, 16, 0, -2752399, 23, 0, -2752355, 15, 0, -2752330, 20, 0, -2686881, 15, 0, -2686880, 16, 0, -2686864, 12, 0, -2686861, 12, 0, -2686821, 16, 0, -2621329, 10, 0, -2621327, 3, 0, -2621325, 3, 0, -2555795, 12, 0, -2555792, 12, 0, -2555791, 6, 0, -2555790, 9, 0, -2490253, 12, 0, -2424695, 12, 0, -2293742, 14, 0, -2293739, 10, 0, -2293631, 15, 0, -2293630, 16, 0, -2293620, 15, 0, -2228204, 7, 0, -2228095, 16, 0, -2228092, 12, 0, -2228081, 15, 0, -2228074, 15, 0, -2228072, 4, 0, -2228036, 23, 0, -2162606, 12, 0, -2162544, 16, 0, -2162540, 16, 0, -2097137, 11, 0, -2097061, 12, 0, -2097009, 21, 0, -2097008, 23, 0, -2097005, 13, 0, -2097002, 15, 0, -2096996, 12, 0, -2096993, 11, 0, -2031538, 12, 0, -2031533, 16, 0, -2031471, 4, 0, -2031456, 12, 0, -2031455, 10, 0, -2031452, 6, 0, -2031429, 17, 0, -1965936, 13, 0, -1965923, 11, 0, -1965921, 6, 0, -1965917, 12, 0, -1900461, 12, 0, -1900459, 16, 0, -1900384, 6, 0, -1835004, 15, 0, -1834847, 12, 0, -1834845, 6, 0, -1703849, 5, 0, -1703796, 23, 0, -1638317, 5, 0, -1572778, 5, 0, -1572777, 14, 0, -1572761, 15, 0, -1572668, 1, 0, -1507242, 14, 0, -1507176, 13, 0, -1441708, 5, 0, -1441682, 15, 0, -1441663, 5, 0, -1441660, 5, 0, -1441654, 5, 0, -1376236, 21, 0, -1376169, 5, 0, -1376151, 16, 0, -1376149, 15, 0, -1376144, 15, 0, -1376119, 5, 0, -1376069, 22, 0, -1310700, 21, 0, -1310642, 5, 0, -1310640, 5, 0, -1310614, 15, 0, -1310613, 16, 0, -1310585, 5, 0, -1310571, 11, 0, -1310570, 23, 0, -1310558, 6, 0, -1310532, 20, 0, -1310523, 3, 0, -1245054, 5, 0, -1245053, 14, 0, -1245036, 9, 0, -1245031, 20, 0, -1179520, 16, 0, -1179499, 9, 0, -1179498, 10, 0, -1179496, 19, 0, -1179493, 6, 0, -1179492, 18, 0, -1179466, 14, 0, -1113980, 16, 0, -1113978, 15, 0, -1113956, 6, 0, -1113955, 10, 0, -1113930, 19, 0, -1048554, 1, 0, -1048553, 1, 0, -1048447, 16, 0, -1048442, 15, 0, -1048396, 22, 0, -1048395, 14, 0, -983019, 1, 0, -983009, 20, 0, -982905, 16, 0, -982865, 23, 0, -851979, 21, 0, -851978, 21, 0, -917480, 21, 0, -917478, 21, 0, -917375, 15, 0, -851840, 16, 0, -851794, 16, 0, -851791, 3, 0, -786319, 14, 0, -786259, 15, 0, -786257, 16, 0, -786255, 3, 0, -720717, 14, 0, -720702, 1, 0, -589836, 15, 0, -655256, 5, 0, -655248, 14, 0, -655235, 14, 0, -655195, 12, 0, -655185, 14, 0, -655173, 15, 0, -655171, 16, 0, -589785, 20, 0, -589721, 14, 0, -589719, 5, 0, -589715, 14, 0, -589708, 14, 0, -589687, 16, 0, -589671, 16, 0, -589654, 16, 0, -589646, 23, 0, -589638, 15, 0, -589637, 16, 0, -524186, 14, 0, -524184, 5, 0, -524183, 14, 0, -524160, 16, 0, -524150, 16, 0, -524134, 16, 0, -524119, 16, 0, -524107, 21, 0, -458647, 5, 0, -458646, 5, 0, -458573, 23, 0, -131078, 21, 0, -196606, 16, 0, -131068, 15, 0, -130915, 23, 0, -7, 15, 0, -65384, 23, 0, 131053, 21, 0, 131057, 16, 0, 65696, 1, 0, 65728, 1, 0, 196592, 15, 0, 196594, 16, 0, 131082, 16, 0, 131083, 15, 0, 131177, 16, 0, 131188, 16, 0, 131200, 15, 0, 131219, 16, 0, 131220, 16, 0, 131235, 16, 0, 131252, 15, 0, 196708, 15, 0, 196713, 15, 0, 196714, 16, 0, 196737, 16, 0, 196746, 15, 0, 196772, 15, 0, 196774, 16, 0, 196797, 1, 0, 262246, 15, 0, 262272, 15, 0, 262274, 15, 0, 262281, 15, 0, 262307, 15, 0, 393197, 16, 0, 393200, 15, 0, 393208, 15, 0, 327778, 16, 0, 327781, 15, 0, 327787, 15, 0, 327788, 16, 0, 327794, 16, 0, 327803, 16, 0, 327806, 16, 0, 327811, 16, 0, 327813, 15, 0, 458745, 15, 0, 393341, 16, 0, 393361, 16, 0, 393382, 15, 0, 458893, 15, 0, 458917, 15, 0, 524427, 15, 0 )
+
 [node name="characters" type="YSort" parent="YSort"]
 
-[node name="TopDownPlayer" parent="YSort/characters" instance=ExtResource( 10 )]
-position = Vector2( 1173.16, -787.05 )
+[node name="TopDownPlayer" parent="YSort/characters" instance=ExtResource( 11 )]
+position = Vector2( -4.48651, 19.0344 )
 
-[node name="follower1" parent="YSort/characters" instance=ExtResource( 11 )]
-position = Vector2( 1214.42, -709.98 )
+[node name="follower1" parent="YSort/characters" instance=ExtResource( 12 )]
+position = Vector2( 46.2935, 31.0507 )
 speed = 95
 followDistance = 45
 targetPath = NodePath("../TopDownPlayer")
-spriteTexture = ExtResource( 12 )
+spriteTexture = ExtResource( 13 )
 follower_name = "Kelly"
 
-[node name="follower2" parent="YSort/characters" instance=ExtResource( 11 )]
-position = Vector2( 1221.57, -823.106 )
+[node name="follower2" parent="YSort/characters" instance=ExtResource( 12 )]
+position = Vector2( -41.757, 14.7117 )
 speed = 95
 followDistance = 40
 targetPath = NodePath("../follower1")
-spriteTexture = ExtResource( 13 )
+spriteTexture = ExtResource( 14 )
 follower_name = "Dale"
 
-[node name="follower3" parent="YSort/characters" instance=ExtResource( 11 )]
-position = Vector2( 1284.02, -760.099 )
+[node name="follower3" parent="YSort/characters" instance=ExtResource( 12 )]
+position = Vector2( 106.373, 45.9854 )
 speed = 95
 followDistance = 40
 targetPath = NodePath("../follower2")
-spriteTexture = ExtResource( 14 )
+spriteTexture = ExtResource( 15 )
 follower_name = "Tom"
 
-[node name="follower4" parent="YSort/characters" instance=ExtResource( 11 )]
-position = Vector2( 1088.67, -745.73 )
+[node name="follower4" parent="YSort/characters" instance=ExtResource( 12 )]
+position = Vector2( -71.5231, 49.2477 )
 speed = 95
 followDistance = 45
 targetPath = NodePath("../follower3")
-spriteTexture = ExtResource( 15 )
+spriteTexture = ExtResource( 16 )
 follower_name = "Sarah"
 
-[node name="gateOfHeaven" parent="YSort" instance=ExtResource( 16 )]
+[node name="gateOfHeaven" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -8.04431, -20.527 )
 
 [node name="trees" type="YSort" parent="YSort"]
 editor/display_folded = true
 position = Vector2( -614.046, -1853.01 )
 
-[node name="vertTreeWall" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 203.25, 1511.9 )
 
-[node name="vertTreeWall20" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall20" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 81.25, 1425.9 )
 
-[node name="vertTreeWall11" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall11" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 3701.25, 1529.9 )
 
-[node name="vertTreeWall4" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall4" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 203.25, 935.902 )
 
-[node name="vertTreeWall21" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall21" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 2398.07, 422.488 )
 
-[node name="vertTreeWall46" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall46" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 2040.09, 550.432 )
 
-[node name="vertTreeWall27" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall27" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 3224.94, 915.042 )
 
-[node name="vertTreeWall40" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall40" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 1707.02, 402.744 )
 
-[node name="vertTreeWall10" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall10" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 3701.25, 953.902 )
 
-[node name="vertTreeWall7" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall7" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 3773.16, 565.332 )
 
-[node name="vertTreeWall12" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall12" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 2158.64, 621.38 )
 
-[node name="vertTreeWall47" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall47" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 1606.8, 879.853 )
 
-[node name="vertTreeWall45" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall45" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 1800.66, 749.324 )
 
-[node name="vertTreeWall30" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall30" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 2618.91, 900.333 )
 
-[node name="vertTreeWall42" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall42" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 1100.99, 388.035 )
 
-[node name="vertTreeWall36" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall36" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 2594.19, 1679.24 )
 
-[node name="vertTreeWall37" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall37" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 2983.64, 1286.69 )
 
-[node name="vertTreeWall19" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall19" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 3811.16, 394.157 )
 
-[node name="vertTreeWall50" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall50" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 3435.09, 199.011 )
 
-[node name="vertTreeWall51" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall51" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 3230.89, 200.303 )
 
-[node name="vertTreeWall2" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall2" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 203.302, 1689.28 )
 
-[node name="vertTreeWall22" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall22" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 81.302, 1603.28 )
 
-[node name="vertTreeWall16" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall16" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 3701.3, 1707.28 )
 
-[node name="vertTreeWall18" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall18" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 3701.3, 1908.28 )
 
-[node name="vertTreeWall5" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall5" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 203.302, 1113.28 )
 
-[node name="vertTreeWall23" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall23" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 81.302, 1027.28 )
 
-[node name="vertTreeWall28" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall28" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 3224.99, 1092.42 )
 
-[node name="vertTreeWall41" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall41" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 1707.07, 580.122 )
 
-[node name="vertTreeWall44" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall44" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 1707.07, 762.345 )
 
-[node name="vertTreeWall14" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall14" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 3701.3, 1131.28 )
 
-[node name="vertTreeWall8" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall8" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 3773.21, 742.706 )
 
-[node name="vertTreeWall13" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall13" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 1885.32, 829.439 )
 
-[node name="vertTreeWall31" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall31" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 2431.93, 1094.76 )
 
-[node name="vertTreeWall39" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall39" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 914.01, 582.462 )
 
-[node name="vertTreeWall35" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall35" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 2407.2, 1873.66 )
 
-[node name="vertTreeWall38" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall38" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 2796.65, 1481.12 )
 
-[node name="vertTreeWall33" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall33" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 1804.42, 1540.77 )
 
-[node name="vertTreeWall48" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall48" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 438.25, 783.504 )
 
-[node name="vertTreeWall3" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall3" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 203.302, 1889.28 )
 
-[node name="vertTreeWall24" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall24" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 81.302, 1803.28 )
 
-[node name="vertTreeWall6" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall6" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 203.302, 1313.28 )
 
-[node name="vertTreeWall25" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall25" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 81.302, 1227.28 )
 
-[node name="vertTreeWall15" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall15" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 3701.3, 1331.28 )
 
-[node name="vertTreeWall9" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall9" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 3773.21, 942.706 )
 
-[node name="vertTreeWall26" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall26" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 2608.53, 205.714 )
 
-[node name="vertTreeWall52" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall52" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 2857.96, 207.006 )
 
-[node name="vertTreeWall29" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall29" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 81.302, 87.276 )
 
-[node name="vertTreeWall17" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall17" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 1595.21, 1048.97 )
 
-[node name="vertTreeWall43" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall43" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 695, 795.703 )
 
-[node name="vertTreeWall32" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall32" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 2055.48, 1327.92 )
 
-[node name="vertTreeWall49" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall49" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 689.31, 570.654 )
 
-[node name="vertTreeWall34" parent="YSort/trees" instance=ExtResource( 17 )]
+[node name="vertTreeWall34" parent="YSort/trees" instance=ExtResource( 18 )]
 position = Vector2( 1514.31, 1760.29 )
 
-[node name="horzTreeWall" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 350.338, 1880.41 )
 
-[node name="horzTreeWall2" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall2" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 831.822, 1894.38 )
 
-[node name="horzTreeWall20" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall20" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 3506.02, 229.561 )
 
-[node name="horzTreeWall45" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall45" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 3172.54, 813.738 )
 
-[node name="horzTreeWall53" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall53" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 1654.62, 301.44 )
 
-[node name="horzTreeWall32" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall32" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 413.167, 932.139 )
 
-[node name="horzTreeWall8" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall8" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 2001.86, 1894.36 )
 
-[node name="horzTreeWall26" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall26" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 1114.38, 1081.07 )
 
-[node name="horzTreeWall5" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall5" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 1416.82, 1894.38 )
 
-[node name="horzTreeWall27" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall27" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 529.341, 1081.09 )
 
-[node name="horzTreeWall11" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall11" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 2586.86, 1894.36 )
 
-[node name="horzTreeWall30" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall30" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 2279.6, 450.64 )
 
-[node name="horzTreeWall54" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall54" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 1921.62, 578.584 )
 
-[node name="horzTreeWall35" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall35" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 2739.87, 729.592 )
 
-[node name="horzTreeWall50" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall50" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 1221.95, 217.294 )
 
-[node name="horzTreeWall41" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall41" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 2715.15, 1508.5 )
 
-[node name="horzTreeWall44" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall44" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 3104.6, 1115.95 )
 
-[node name="horzTreeWall48" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall48" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 824.291, 528.054 )
 
-[node name="horzTreeWall15" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall15" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 3171.86, 1894.36 )
 
-[node name="horzTreeWall23" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall23" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 2752.82, 231.605 )
 
-[node name="horzTreeWall3" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall3" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 1026.82, 1894.38 )
 
-[node name="horzTreeWall25" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall25" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 3699.73, 229.561 )
 
-[node name="horzTreeWall34" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall34" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 608.167, 932.139 )
 
-[node name="horzTreeWall10" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall10" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 2196.86, 1894.36 )
 
-[node name="horzTreeWall19" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall19" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 1454.44, 1078.28 )
 
-[node name="horzTreeWall33" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall33" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 589.392, 791.609 )
 
-[node name="horzTreeWall36" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall36" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 1914.71, 1357.23 )
 
-[node name="horzTreeWall55" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall55" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 610.073, 601.722 )
 
-[node name="horzTreeWall39" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall39" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 1373.54, 1789.61 )
 
-[node name="horzTreeWall7" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall7" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 1611.82, 1894.38 )
 
-[node name="horzTreeWall29" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall29" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 724.341, 1081.09 )
 
-[node name="horzTreeWall13" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall13" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 2781.86, 1894.36 )
 
-[node name="horzTreeWall18" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall18" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 2014.33, 643.117 )
 
-[node name="horzTreeWall37" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall37" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 2474.6, 922.069 )
 
-[node name="horzTreeWall51" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall51" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 956.68, 409.771 )
 
-[node name="horzTreeWall42" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall42" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 2449.88, 1700.97 )
 
-[node name="horzTreeWall43" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall43" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 2839.33, 1308.43 )
 
-[node name="horzTreeWall14" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall14" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 3366.86, 1894.36 )
 
-[node name="horzTreeWall22" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall22" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 2973.09, 229.778 )
 
-[node name="horzTreeWall4" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall4" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 1221.82, 1894.38 )
 
-[node name="horzTreeWall21" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall21" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 334.341, 1081.09 )
 
-[node name="horzTreeWall46" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall46" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 2977.52, 814.133 )
 
-[node name="horzTreeWall49" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall49" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 1459.6, 301.835 )
 
-[node name="horzTreeWall9" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall9" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 2391.86, 1894.36 )
 
-[node name="horzTreeWall17" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall17" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 1738.7, 857.91 )
 
-[node name="horzTreeWall38" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall38" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 2119.45, 1157.31 )
 
-[node name="horzTreeWall57" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall57" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 776.135, 421.141 )
 
-[node name="horzTreeWall40" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall40" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 1657.8, 1569.24 )
 
-[node name="horzTreeWall56" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall56" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 291.63, 811.974 )
 
-[node name="horzTreeWall6" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall6" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 1806.82, 1894.38 )
 
-[node name="horzTreeWall28" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall28" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 919.341, 1081.09 )
 
-[node name="horzTreeWall12" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall12" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 2976.86, 1894.36 )
 
-[node name="horzTreeWall31" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall31" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 2482.5, 235.733 )
 
-[node name="horzTreeWall16" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall16" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 3561.86, 1894.36 )
 
-[node name="horzTreeWall24" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall24" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 3158.68, 246.625 )
 
-[node name="horzTreeWall47" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall47" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 2782.92, 817.833 )
 
-[node name="horzTreeWall52" parent="YSort/trees" instance=ExtResource( 18 )]
+[node name="horzTreeWall52" parent="YSort/trees" instance=ExtResource( 19 )]
 position = Vector2( 1265, 305.535 )
 
-[node name="tree1" parent="YSort/trees" instance=ExtResource( 19 )]
+[node name="tree1" parent="YSort/trees" instance=ExtResource( 20 )]
 position = Vector2( 398.283, 1630.58 )
 
-[node name="tree2" parent="YSort/trees" instance=ExtResource( 20 )]
+[node name="tree2" parent="YSort/trees" instance=ExtResource( 21 )]
 position = Vector2( 1082.15, 1624.18 )
 
-[node name="tree8" parent="YSort/trees" instance=ExtResource( 20 )]
+[node name="tree8" parent="YSort/trees" instance=ExtResource( 21 )]
 position = Vector2( 752.122, 1373.66 )
 
-[node name="tree3" parent="YSort/trees" instance=ExtResource( 21 )]
+[node name="tree3" parent="YSort/trees" instance=ExtResource( 22 )]
 position = Vector2( 399.046, 1738.79 )
 
-[node name="tree4" parent="YSort/trees" instance=ExtResource( 22 )]
+[node name="tree4" parent="YSort/trees" instance=ExtResource( 23 )]
 position = Vector2( 437.886, 1936.44 )
 
-[node name="tree5" parent="YSort/trees" instance=ExtResource( 23 )]
+[node name="tree5" parent="YSort/trees" instance=ExtResource( 24 )]
 position = Vector2( 849.394, 1754.49 )
 
-[node name="tree6" parent="YSort/trees" instance=ExtResource( 24 )]
+[node name="tree6" parent="YSort/trees" instance=ExtResource( 25 )]
 position = Vector2( 840.849, 1340.88 )
 
-[node name="tree9" parent="YSort/trees" instance=ExtResource( 24 )]
+[node name="tree9" parent="YSort/trees" instance=ExtResource( 25 )]
 position = Vector2( 607.174, 1450.27 )
 
-[node name="tree7" parent="YSort/trees" instance=ExtResource( 25 )]
+[node name="tree7" parent="YSort/trees" instance=ExtResource( 26 )]
 position = Vector2( 526.543, 1539.15 )
 
-[node name="latrine" parent="YSort" instance=ExtResource( 26 )]
+[node name="latrine" parent="YSort" instance=ExtResource( 27 )]
 position = Vector2( 668.077, -1242.96 )
 
 [node name="enemies" type="YSort" parent="YSort"]
+editor/display_folded = true
 
-[node name="pooMan" parent="YSort/enemies" instance=ExtResource( 27 )]
+[node name="pooMan" parent="YSort/enemies" instance=ExtResource( 28 )]
 position = Vector2( 125.701, -319.636 )
 follower_msg = "What the hell is that!? P-poo?"
 
-[node name="pooMan2" parent="YSort/enemies" instance=ExtResource( 27 )]
+[node name="pooMan2" parent="YSort/enemies" instance=ExtResource( 28 )]
 position = Vector2( 540.273, -1135.99 )
 
-[node name="pooMan4" parent="YSort/enemies" instance=ExtResource( 27 )]
+[node name="pooMan4" parent="YSort/enemies" instance=ExtResource( 28 )]
 position = Vector2( 536.376, -1488.59 )
 
-[node name="pooMan3" parent="YSort/enemies" instance=ExtResource( 27 )]
+[node name="pooMan3" parent="YSort/enemies" instance=ExtResource( 28 )]
 position = Vector2( 788.274, -1133.99 )
 
-[node name="pooMan5" parent="YSort/enemies" instance=ExtResource( 27 )]
+[node name="pooMan5" parent="YSort/enemies" instance=ExtResource( 28 )]
 position = Vector2( 784.378, -1486.59 )
 
-[node name="zombie" parent="YSort/enemies" instance=ExtResource( 28 )]
-position = Vector2( 2881.14, -1261.6 )
 
 [node name="gate" parent="YSort" instance=ExtResource( 29 )]
 position = Vector2( 2704.47, -1650.55 )
 
-[node name="key" parent="YSort" instance=ExtResource( 30 )]
-position = Vector2( 461.609, -1204.18 )
+[node name="hud" parent="." instance=ExtResource( 30 )]
 
-[node name="hud" parent="." instance=ExtResource( 31 )]
-
-[node name="van" parent="." instance=ExtResource( 32 )]
+[node name="van" parent="." instance=ExtResource( 31 )]
 position = Vector2( 605.229, 2300.19 )
 
-[node name="Fog" parent="." instance=ExtResource( 33 )]
-visible = false
-position = Vector2( 1972.8, 1063.96 )
+[node name="Fog" parent="." instance=ExtResource( 32 )]
 
-[node name="to_cemetery" parent="." instance=ExtResource( 34 )]
+visible = false
+position = Vector2( 1976.79, 1259.82 )
+scale = Vector2( 4, 4.26672 )
+
+
+[node name="to_cemetery" parent="." instance=ExtResource( 33 )]
 position = Vector2( 3320.97, 239.161 )
 destination = "res://scenes/cemetery/cemetery.tscn"
 
-[node name="hint1" parent="." instance=ExtResource( 35 )]
+[node name="hint1" parent="." instance=ExtResource( 34 )]
+
 position = Vector2( 1272.39, 1394.67 )
 messages = "The bathrooms are just north of here. Jason better be there!
 Let's check the bathrooms north of here!"
+one_shot = false
 wait_time = 15.0
+message_count = 1
 shape = SubResource( 1 )
 [connection signal="timeout" from="river_anim_timer" to="." method="_on_river_anim_timer_timeout"]
