@@ -20,6 +20,8 @@ var color = Color(1,1,1)
 onready var tie = $Panel/TextInterfaceEngine
 onready var speaker_label = $speaker/Label
 onready var active = false
+var zoom_max = Vector2.ONE
+
 
 onready var locations = {
 	"center" : get_viewport_rect().size / 2.0
@@ -95,7 +97,7 @@ func move_to(pt : Vector2):
 
 func hide():
 	#visible = false
-	$Tween.interpolate_property(self, "rect_scale", Vector2.ONE, Vector2.ZERO, 0.2, Tween.TRANS_LINEAR, Tween.EASE_IN)
+	$Tween.interpolate_property(self, "rect_scale", zoom_max, Vector2.ZERO, 0.2, Tween.TRANS_LINEAR, Tween.EASE_IN)
 	$Tween.start()
 	tie.reset()
 	emit_signal("hiding")
@@ -105,7 +107,7 @@ func show(pt : Vector2 = Vector2(0,0), new_speaker = ""):
 	if new_speaker:
 		set_speaker(new_speaker)
 	move_to(pt)
-	$Tween.interpolate_property(self, "rect_scale", Vector2.ZERO, Vector2.ONE, 0.2, Tween.TRANS_LINEAR, Tween.EASE_IN)
+	$Tween.interpolate_property(self, "rect_scale", Vector2.ZERO, zoom_max, 0.2, Tween.TRANS_LINEAR, Tween.EASE_IN)
 	$Tween.start()
 	active = true
 	#visible = true
