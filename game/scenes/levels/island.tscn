@@ -579,5 +579,13 @@ stream_path = ExtResource( 37 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BackgroundAudioTrigger1"]
 position = Vector2( -3.0882, 73.4871 )
 shape = SubResource( 2 )
+
+[node name="cliffedge" type="StaticBody2D" parent="."]
+position = Vector2( 611.267, 1970.56 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cliffedge"]
+position = Vector2( 121.51, -6.27295 )
+polygon = PoolVector2Array( -652.343, -21.5485, -603.664, -24.9447, -583.665, -26.0768, -611.589, -41.5482, -661.022, -25.322, -662.532, -12.1146, -648.947, 4.11157, -610.161, 19.7155, 77.9587, 25.4291, 101.194, -23.6359, 45.4663, 0.910767, 34.8516, 8.87183, -13.5782, 8.87183, -34.7791, -12.5958, -81.5416, -11.0709, -171.892, -11.621, -244.449, 1.57434, -272.313, 9.5354, -313.445, 0.910889, -350.542, -20.0709, -390.459, -7.20898, -424.798, -16.6429, -452.345, -27.5862, -549.543, -5.07092, -584.543, -0.0709229, -610.457, -10.2279, -647.06, -9.47314 )
+one_way_collision = true
 [connection signal="timeout" from="river_anim_timer" to="." method="_on_river_anim_timer_timeout"]
 [connection signal="body_entered" from="BackgroundAudioTrigger1" to="BackgroundAudioTrigger1" method="_on_BackgroundAudioTrigger1_body_entered"]
