@@ -17,6 +17,7 @@ onready var sprite = $"3DirSprite"
 
 func _ready():
 	#target = get_node(targetPath)
+	if not spriteTexture: return
 	sprite.texture = spriteTexture
 
 func enabled_set(value):

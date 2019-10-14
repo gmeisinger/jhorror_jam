@@ -1,8 +1,7 @@
 extends "res://scenes/enemy/enemy.gd"
 
-
-var fade_out_scaries = false
 var should_die = false
+var fade_out_scaries = false
 
 func _process(delta):
 	if fade_out_scaries:
@@ -15,7 +14,6 @@ func _process(delta):
 			if should_die:
 				queue_free()
 
-
 func _physics_process(delta):
 	if not target: return
 	if is_following:
@@ -27,17 +25,37 @@ func _physics_process(delta):
 		if target and target.global_position.distance_to(start_pos) < (MAX_FOLLOW_DISTANCE * 0.8):
 			is_following = true
 
+func return_to_spawn(delta):
+	var move : Vector2 = (start_pos - global_position)
+	var move_length = move.length()
+	var direction : Vector2 = move.normalized()
+	velocity = direction * speed
+	if move_length > followDistance:
+		velocity = move_and_slide(velocity)
+	else:
+		target = null
+
+
+
+func follow(delta):
+	var move : Vector2 = (target.global_position - global_position)
+	var move_length = move.length()
+	var direction : Vector2 = move.normalized()
+	velocity = direction * speed
+	if move_length > followDistance:
+		velocity = move_and_slide(velocity)
+
 
 func kill(player):
 	target = null
 	$hitbox/CollisionShape2D.disabled = true
-	$kill_sprite.global_position = player.global_position
-	$kill_sprite/victim.texture = player.get_sprite()
-	$kill_sprite/victim.show()
-	$kill_sprite.visible = true
-	$"3DirSprite".visible = false
-	$kill_sprite/AnimationPlayer.play("kill")
-	return $kill_sprite/AnimationPlayer
+#	$kill_sprite.global_position = player.global_position
+#	$kill_sprite/victim.texture = player.get_sprite()
+#	$kill_sprite/victim.show()
+#	$kill_sprite.visible = true
+#	$"3DirSprite".visible = false
+#	$kill_sprite/AnimationPlayer.play("kill")
+	pass
 
 
 func _on_VisibilityNotifier2D_screen_entered():
@@ -57,4 +75,3 @@ func _on_VisibilityNotifier2D_screen_exited():
 func _on_AnimationPlayer_animation_finished(anim_name):
 	fade_out_scaries = true
 	should_die = true
-
