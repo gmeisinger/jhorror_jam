@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/zombieSheet.png-cf30ed6a25184a04cfe5ab180dc419d2.stex"
+path="res://.import/Cemeterykeys00_190925.png-93d3b26343cf7e567455c1f212b7ceb1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/zombieSheet.png"
-dest_files=[ "res://.import/zombieSheet.png-cf30ed6a25184a04cfe5ab180dc419d2.stex" ]
+source_file="res://assets/images/Cemeterykeys00_190925.png"
+dest_files=[ "res://.import/Cemeterykeys00_190925.png-93d3b26343cf7e567455c1f212b7ceb1.stex" ]
 
 [params]
 

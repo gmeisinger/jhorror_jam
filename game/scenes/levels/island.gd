@@ -12,6 +12,7 @@ func _ready():
 	SignalMgr.register_subscriber(self, "ArrivedAtDestination", "on_ArrivedAtDestination")
 	SignalMgr.register_subscriber(self, "FadeOutFinished", "on_FadeOutFinished")
 	SignalMgr.register_subscriber(self, "script_complete", "on_ArrivedAtDestination")
+	SignalMgr.register_subscriber(self, "key_found", "_on_key_found")
 	SignalMgr.register_publisher(self, "FadeOut")
 	SignalMgr.register_publisher(self, "FadeIn")
 	SignalMgr.register_publisher(self, "follower_msg")
@@ -51,3 +52,8 @@ func on_FadeOutFinished():
 	emit_signal("follower_msg", "Jason! ... Jason, where ARE you!?")
 	emit_signal("follower_msg", "You go first, PLAYER.")
 
+func _on_key_found():
+	var new_messages = []
+	new_messages.append("The cemetery is north-east of here. Let's see if this key works!")
+	new_messages.append("Maybe Jason went to the cemetery to the north-east?")
+	$hint1.message_pool = new_messages

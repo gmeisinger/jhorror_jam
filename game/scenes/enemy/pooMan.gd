@@ -1,5 +1,6 @@
 extends "res://scenes/enemy/enemy.gd"
 
+
 var fade_out_scaries = false
 var should_die = false
 
@@ -13,6 +14,7 @@ func _process(delta):
 			BackgroundMusic.play(0.0)
 			if should_die:
 				queue_free()
+
 
 func _physics_process(delta):
 	if not target: return
@@ -55,3 +57,4 @@ func _on_VisibilityNotifier2D_screen_exited():
 func _on_AnimationPlayer_animation_finished(anim_name):
 	fade_out_scaries = true
 	should_die = true
+
