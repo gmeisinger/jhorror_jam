@@ -1,6 +1,6 @@
 extends Button
 
-export (String) var sceneToLoad = ""
+export (String, FILE, "*.tscn") var sceneToLoad = ""
 export (float) var transitionSpeed = 2.0
 export (bool) var fadeSound = false
 
