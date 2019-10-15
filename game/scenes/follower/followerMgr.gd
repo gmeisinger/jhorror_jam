@@ -1,6 +1,7 @@
 extends Node
 
 var follower_scn = load("res://scenes/follower/Follower.tscn")
+var gameover_screen = "res://scenes/title/gameover.tscn"
 
 onready var followers = []
 onready var references = []
@@ -75,7 +76,7 @@ func find_reference(fname : String):
 func _on_player_died(player, enemy):
 	
 	if followers.empty():
-		#game over
+		transitionMgr.transitionTo(gameover_screen)
 		return
 	player.hide()
 	#set_enabled_followers(false)
