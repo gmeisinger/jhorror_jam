@@ -13,3 +13,10 @@ func collect():
 	var key = "key" + String(number)
 	globals.set(key, true)
 	queue_free()
+
+func _on_hitbox_area_entered(area):
+	collect()
+
+
+func _on_hitbox_body_entered(body):
+	collect()
