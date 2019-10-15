@@ -6,8 +6,13 @@ onready var player = $YSort/TopDownPlayer
 
 func _ready():
 	globals.set("current_scene", self)
+	globals.set("player", $YSort/TopDownPlayer)
 	globals.get("player").get_node("droneCamera/rainManager").on_RainAmountChange("none")
 	place_followers()
+
+func add_zombie(zombie, _pos : Vector2):
+	$YSort.add_child(zombie)
+	zombie.position = _pos
 
 func place_followers():
 	var new_refs = []
