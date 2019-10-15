@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/cave/cave.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/cave/cave.png" type="Texture" id=2]
 [ext_resource path="res://scenes/topDownPlayer/TopDownPlayer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/cave/zombie_spawner.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/hints/hint_trigger.tscn" type="PackedScene" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 89.6071, 10 )
 
 [node name="cave" type="Node2D"]
 script = ExtResource( 1 )
@@ -20,4 +25,74 @@ polygon = PoolVector2Array( 730, 1500, 730, 1390, 790, 1380, 840, 1380, 840, 139
 [node name="YSort" type="YSort" parent="."]
 
 [node name="TopDownPlayer" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 738.656, 1303.36 )
+position = Vector2( 855.41, 1341.68 )
+
+[node name="enemies" type="YSort" parent="YSort"]
+
+[node name="zombie_spawner" parent="." instance=ExtResource( 4 )]
+position = Vector2( 391.78, 702.923 )
+
+[node name="zombie_spawner2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 683.61, 1151.8 )
+
+[node name="zombie_spawner3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 631.369, 1193.21 )
+
+[node name="zombie_spawner4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 740.85, 1058.34 )
+
+[node name="zombie_spawner5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 772.584, 904.431 )
+
+[node name="zombie_spawner6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 886.825, 948.858 )
+
+[node name="zombie_spawner7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1032.8, 796.537 )
+
+[node name="zombie_spawner8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1161.32, 913.951 )
+
+[node name="zombie_spawner9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1181.95, 725.136 )
+
+[node name="zombie_spawner10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 268.019, 1261.43 )
+
+[node name="zombie_spawner11" parent="." instance=ExtResource( 4 )]
+position = Vector2( 409.234, 1258.26 )
+
+[node name="zombie_spawner12" parent="." instance=ExtResource( 4 )]
+position = Vector2( 490.155, 1112.29 )
+
+[node name="zombie_spawner13" parent="." instance=ExtResource( 4 )]
+position = Vector2( 358.46, 1158.3 )
+
+[node name="zombie_spawner14" parent="." instance=ExtResource( 4 )]
+position = Vector2( 396.54, 1018.67 )
+
+[node name="zombie_spawner15" parent="." instance=ExtResource( 4 )]
+position = Vector2( 345.766, 886.978 )
+
+[node name="zombie_spawner16" parent="." instance=ExtResource( 4 )]
+position = Vector2( 518.871, 485.118 )
+
+[node name="zombie_spawner17" parent="." instance=ExtResource( 4 )]
+position = Vector2( 882.093, 377.647 )
+
+[node name="zombie_spawner18" parent="." instance=ExtResource( 4 )]
+position = Vector2( 346.102, 404.855 )
+
+[node name="zombie_spawner19" parent="." instance=ExtResource( 4 )]
+position = Vector2( 197.82, 317.791 )
+
+[node name="blocked_entrance" type="StaticBody2D" parent="."]
+position = Vector2( 663.806, 1489.12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blocked_entrance"]
+shape = SubResource( 1 )
+
+[node name="no_escape" parent="." instance=ExtResource( 5 )]
+position = Vector2( 668.333, 1496.2 )
+messages = "We can't go back there...
+It's too dangerous."
