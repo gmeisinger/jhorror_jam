@@ -53,6 +53,7 @@ func on_FadeOutFinished():
 	emit_signal("follower_msg", "You go first, PLAYER.")
 
 func _on_key_found():
+	emit_signal("follower_msg", "An old key? We should keep this.")
 	var new_messages = []
 	new_messages.append("The cemetery is north-east of here. Let's see if this key works!")
 	new_messages.append("Maybe Jason went to the cemetery to the north-east?")
