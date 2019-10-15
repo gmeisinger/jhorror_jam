@@ -1,12 +1,9 @@
-
 [gd_scene load_steps=40 format=2]
-
 
 [ext_resource path="res://scenes/levels/island.gd" type="Script" id=1]
 [ext_resource path="res://scenes/storm/lightningSpawner.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/images/grass_tile_32x32.png" type="Texture" id=3]
 [ext_resource path="res://scenes/environment/path.tscn" type="PackedScene" id=4]
-
 [ext_resource path="res://environment_tileset.tres" type="TileSet" id=5]
 [ext_resource path="res://assets/images/cliff_face.png" type="Texture" id=6]
 [ext_resource path="res://assets/images/river_anim.png" type="Texture" id=7]
@@ -41,7 +38,6 @@
 [ext_resource path="res://scenes/audio/BackgroundAudioTrigger.gd" type="Script" id=36]
 [ext_resource path="res://assets/sounds/spooky_ambience.ogg" type="AudioStream" id=37]
 
-
 [sub_resource type="CircleShape2D" id=1]
 radius = 300.0
 
@@ -65,10 +61,8 @@ __meta__ = {
 }
 
 [node name="path" parent="." instance=ExtResource( 4 )]
-
 tile_set = ExtResource( 5 )
 tile_data = PoolIntArray( 393257, 0, 0, 393264, 0, 0, 589861, 0, 0, 720927, 25, 0, 720930, 0, 0, 851999, 0, 0, 852000, 25, 0, 917533, 0, 0, 1048603, 0, 0, 1179666, 0, 0, 1179673, 0, 0, 1245206, 0, 0, 1310738, 0, 0, 1376271, 0, 0, 1441804, 0, 0, 1572874, 0, 0, 1703944, 0, 0 )
-
 
 [node name="cliff_face" type="Sprite" parent="."]
 position = Vector2( 607.034, 2014.35 )
@@ -553,7 +547,6 @@ follower_msg = "Another poo man!"
 position = Vector2( 2747.37, -356.301 )
 followDistance = 0
 
-
 [node name="gate" parent="YSort" instance=ExtResource( 30 )]
 position = Vector2( 2704.47, -1650.55 )
 
@@ -561,7 +554,6 @@ position = Vector2( 2704.47, -1650.55 )
 
 [node name="van" parent="." instance=ExtResource( 32 )]
 position = Vector2( 605.229, 2300.19 )
-
 
 [node name="Fog" parent="." instance=ExtResource( 33 )]
 position = Vector2( 1976.79, 1259.82 )
@@ -572,7 +564,6 @@ position = Vector2( 3320.97, 239.161 )
 destination = "res://scenes/cemetery/cemetery.tscn"
 
 [node name="hint1" parent="." instance=ExtResource( 35 )]
-
 position = Vector2( 1272.39, 1394.67 )
 messages = "The bathrooms are just north of here. Jason better be there!
 Let's check the bathrooms north of here!"
