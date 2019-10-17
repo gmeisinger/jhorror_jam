@@ -4,6 +4,8 @@ signal follower_msg(msg)
 
 onready var player = $YSort/TopDownPlayer
 
+export var zombies = true
+
 func _ready():
 	globals.set("current_scene", self)
 	globals.set("player", $YSort/TopDownPlayer)
@@ -11,6 +13,7 @@ func _ready():
 	place_followers()
 
 func add_zombie(zombie, _pos : Vector2):
+	if !zombies: return
 	$YSort.add_child(zombie)
 	zombie.position = _pos
 
