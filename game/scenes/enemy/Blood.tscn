@@ -5,7 +5,7 @@
 [node name="Blood" type="CPUParticles2D"]
 position = Vector2( 0.753479, 0.293337 )
 rotation = 0.404916
-amount = 90
+amount = 140
 lifetime = 0.9
 speed_scale = 1.25
 explosiveness = 0.32
