@@ -12,7 +12,6 @@ extents = Vector2( 89.6071, 10 )
 
 [node name="cave" type="Node2D"]
 script = ExtResource( 1 )
-zombies = false
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
@@ -79,9 +78,6 @@ position = Vector2( 396.54, 1018.67 )
 [node name="zombie_spawner15" parent="." instance=ExtResource( 5 )]
 position = Vector2( 345.766, 886.978 )
 
-[node name="zombie_spawner16" parent="." instance=ExtResource( 5 )]
-position = Vector2( 552.222, 465.297 )
-
 [node name="zombie_spawner17" parent="." instance=ExtResource( 5 )]
 position = Vector2( 882.093, 377.647 )
 
@@ -98,3 +94,8 @@ shape = SubResource( 1 )
 position = Vector2( 668.333, 1496.2 )
 messages = "We can't go back there...
 It's too dangerous."
+
+[node name="jason_alert" parent="." instance=ExtResource( 6 )]
+position = Vector2( 359.729, 434.622 )
+messages = "Up ahead... Is that... Jason!?"
+one_shot = true

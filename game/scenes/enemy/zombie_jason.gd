@@ -8,8 +8,10 @@ func _on_turnaround():
 	target = globals.get("player")
 	is_following = true
 	$hitbox/CollisionShape2D.disabled = false
+	emit_signal("follower_msg", "Oh no! They got Jason!!")
 
 func _on_detection():
+	emit_signal("follower_msg", "Jason...?")
 	anim_player.play("turn")
 	$detection.monitoring = false
 
