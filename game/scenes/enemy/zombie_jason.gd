@@ -9,6 +9,7 @@ func _on_turnaround():
 	is_following = true
 	$hitbox/CollisionShape2D.disabled = false
 	emit_signal("follower_msg", "Oh no! They got Jason!!")
+	globals.set("found_jason", true)
 
 func _on_detection():
 	emit_signal("follower_msg", "Jason...?")
