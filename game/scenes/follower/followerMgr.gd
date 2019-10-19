@@ -2,6 +2,7 @@ extends Node
 
 var follower_scn = load("res://scenes/follower/Follower.tscn")
 var gameover_screen = "res://scenes/title/gameover.tscn"
+var win_screen = "res://scenes/title/win_screen.tscn"
 
 onready var followers = []
 onready var references = []
@@ -13,7 +14,11 @@ func _ready():
 	SignalMgr.register_subscriber(self, "follower_msg", "follower_msg")
 	SignalMgr.register_subscriber(self, "player_died", "_on_player_died")
 
-
+func reset():
+	followers.clear()
+	references.clear()
+	player_info = null
+	player_registered = false
 
 func register_follower(follower):
 	var info = FollowerInfo.new(follower.follower_name, follower.spriteTexture)
@@ -76,7 +81,11 @@ func find_reference(fname : String):
 func _on_player_died(player, enemy):
 	
 	if followers.empty():
-		transitionMgr.transitionTo(gameover_screen)
+		if globals.get("found_jason"):
+			transitionMgr.transitionTo(win_screen)
+		else:
+			transitionMgr.transitionTo(gameover_screen)
+		reset()
 		return
 	player.hide()
 	#set_enabled_followers(false)
