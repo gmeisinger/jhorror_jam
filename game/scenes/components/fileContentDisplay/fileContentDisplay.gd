@@ -3,7 +3,8 @@ extends TextEdit
 export (String) var filePath = ""
 
 func _ready():
-	text = readFile()
+	var names = "Created by:\nGeorge Meisinger\nLindsy Kitsis\nJoshua Robinson\nand Jason Lothamer\n\n"
+	text = names + readFile()
 
 func readFile():
 	if filePath == "" || filePath == null:
