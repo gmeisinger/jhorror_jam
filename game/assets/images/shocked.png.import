@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RaijinSheet.png-d65acc866f4a0fbfff72f78bfa296d45.stex"
+path="res://.import/shocked.png-de9498b42f17288d22ab729b2437476a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/RaijinSheet.png"
-dest_files=[ "res://.import/RaijinSheet.png-d65acc866f4a0fbfff72f78bfa296d45.stex" ]
+source_file="res://assets/images/shocked.png"
+dest_files=[ "res://.import/shocked.png-de9498b42f17288d22ab729b2437476a.stex" ]
 
 [params]
 

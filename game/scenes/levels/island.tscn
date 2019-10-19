@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://scenes/levels/island.gd" type="Script" id=1]
 [ext_resource path="res://scenes/storm/lightningSpawner.tscn" type="PackedScene" id=2]
@@ -29,15 +29,16 @@
 [ext_resource path="res://scenes/environment/latrine.tscn" type="PackedScene" id=27]
 [ext_resource path="res://scenes/enemy/pooMan.tscn" type="PackedScene" id=28]
 [ext_resource path="res://scenes/enemy/moth/Moth.tscn" type="PackedScene" id=29]
-[ext_resource path="res://scenes/environment/gate.tscn" type="PackedScene" id=30]
-[ext_resource path="res://scenes/key/key.tscn" type="PackedScene" id=31]
-[ext_resource path="res://scenes/hud/hud.tscn" type="PackedScene" id=32]
-[ext_resource path="res://scenes/environment/van.tscn" type="PackedScene" id=33]
-[ext_resource path="res://scenes/environment/Fog.tscn" type="PackedScene" id=34]
-[ext_resource path="res://scenes/transition/transitionArea.tscn" type="PackedScene" id=35]
-[ext_resource path="res://scenes/hints/hint_trigger.tscn" type="PackedScene" id=36]
-[ext_resource path="res://scenes/audio/BackgroundAudioTrigger.gd" type="Script" id=37]
-[ext_resource path="res://assets/sounds/spooky_ambience.ogg" type="AudioStream" id=38]
+[ext_resource path="res://scenes/enemy/Raijin.tscn" type="PackedScene" id=30]
+[ext_resource path="res://scenes/environment/gate.tscn" type="PackedScene" id=31]
+[ext_resource path="res://scenes/key/key.tscn" type="PackedScene" id=32]
+[ext_resource path="res://scenes/hud/hud.tscn" type="PackedScene" id=33]
+[ext_resource path="res://scenes/environment/van.tscn" type="PackedScene" id=34]
+[ext_resource path="res://scenes/environment/Fog.tscn" type="PackedScene" id=35]
+[ext_resource path="res://scenes/transition/transitionArea.tscn" type="PackedScene" id=36]
+[ext_resource path="res://scenes/hints/hint_trigger.tscn" type="PackedScene" id=37]
+[ext_resource path="res://scenes/audio/BackgroundAudioTrigger.gd" type="Script" id=38]
+[ext_resource path="res://assets/sounds/spooky_ambience.ogg" type="AudioStream" id=39]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 300.0
@@ -548,26 +549,29 @@ follower_msg = "Another poo man!"
 position = Vector2( 1868.34, -1066.83 )
 followDistance = 0
 
-[node name="gate" parent="YSort" instance=ExtResource( 30 )]
+[node name="Raijin" parent="YSort/enemies" instance=ExtResource( 30 )]
+position = Vector2( 2957.01, -1488.14 )
+
+[node name="gate" parent="YSort" instance=ExtResource( 31 )]
 position = Vector2( 2704.47, -1650.55 )
 
-[node name="key" parent="YSort" instance=ExtResource( 31 )]
+[node name="key" parent="YSort" instance=ExtResource( 32 )]
 position = Vector2( 667.93, -1146.2 )
 
-[node name="hud" parent="." instance=ExtResource( 32 )]
+[node name="hud" parent="." instance=ExtResource( 33 )]
 
-[node name="van" parent="." instance=ExtResource( 33 )]
+[node name="van" parent="." instance=ExtResource( 34 )]
 position = Vector2( 605.229, 2300.19 )
 
-[node name="Fog" parent="." instance=ExtResource( 34 )]
+[node name="Fog" parent="." instance=ExtResource( 35 )]
 position = Vector2( 1976.79, 1259.82 )
 scale = Vector2( 4, 4.26672 )
 
-[node name="to_cemetery" parent="." instance=ExtResource( 35 )]
+[node name="to_cemetery" parent="." instance=ExtResource( 36 )]
 position = Vector2( 3320.97, 239.161 )
 destination = "res://scenes/cemetery/cemetery.tscn"
 
-[node name="hint1" parent="." instance=ExtResource( 36 )]
+[node name="hint1" parent="." instance=ExtResource( 37 )]
 position = Vector2( 1272.39, 1394.67 )
 messages = "The bathrooms are just north of here. Jason better be there!
 Let's check the bathrooms north of here!"
@@ -577,8 +581,8 @@ shape = SubResource( 1 )
 
 [node name="BackgroundAudioTrigger1" type="Area2D" parent="."]
 position = Vector2( 605.99, 2164.03 )
-script = ExtResource( 37 )
-stream_path = ExtResource( 38 )
+script = ExtResource( 38 )
+stream_path = ExtResource( 39 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BackgroundAudioTrigger1"]
 position = Vector2( -3.0882, 73.4871 )
