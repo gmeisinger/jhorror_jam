@@ -50,6 +50,7 @@ func follow(delta):
 func kill(player):
 	target = null
 	$hitbox/CollisionShape2D.disabled = true
+	$hitbox.queue_free()
 	# get the kill animation. 
 	# player it 
 	# connect the animation to kill
