@@ -6,6 +6,7 @@ var fade_out_scaries = false
 func _process(delta):
 	if fade_out_scaries:
 		BackgroundMusic.volume_db -= 0.15
+		modulate -= Color(0.0, 0.0, 0.0, 0.015) 
 		if BackgroundMusic.volume_db < -40:
 			fade_out_scaries = false
 			BackgroundMusic.volume_db = 0
@@ -49,13 +50,16 @@ func follow(delta):
 func kill(player):
 	target = null
 	$hitbox/CollisionShape2D.disabled = true
-#	$kill_sprite.global_position = player.global_position
-#	$kill_sprite/victim.texture = player.get_sprite()
-#	$kill_sprite/victim.show()
-#	$kill_sprite.visible = true
-#	$"3DirSprite".visible = false
-#	$kill_sprite/AnimationPlayer.play("kill")
-	pass
+	# get the kill animation. 
+	# player it 
+	# connect the animation to kill
+	$kill_sprite.global_position = player.global_position
+	$kill_sprite/victim.texture = player.get_sprite()
+	$kill_sprite/victim.show()
+	$kill_sprite.visible = true
+	$"3DirSprite".visible = false
+	$kill_sprite/AnimationPlayer.play("disappear")
+	return $kill_sprite/AnimationPlayer
 
 
 func _on_VisibilityNotifier2D_screen_entered():

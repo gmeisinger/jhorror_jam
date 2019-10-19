@@ -28,7 +28,7 @@
 [ext_resource path="res://scenes/environment/tree7.tscn" type="PackedScene" id=26]
 [ext_resource path="res://scenes/environment/latrine.tscn" type="PackedScene" id=27]
 [ext_resource path="res://scenes/enemy/pooMan.tscn" type="PackedScene" id=28]
-[ext_resource path="res://scenes/moth/Moth.tscn" type="PackedScene" id=29]
+[ext_resource path="res://scenes/enemy/moth/Moth.tscn" type="PackedScene" id=29]
 [ext_resource path="res://scenes/environment/gate.tscn" type="PackedScene" id=30]
 [ext_resource path="res://scenes/key/key.tscn" type="PackedScene" id=31]
 [ext_resource path="res://scenes/hud/hud.tscn" type="PackedScene" id=32]
@@ -545,7 +545,7 @@ position = Vector2( 784.378, -1486.59 )
 follower_msg = "Another poo man!"
 
 [node name="Moth" parent="YSort/enemies" instance=ExtResource( 29 )]
-position = Vector2( 2747.37, -356.301 )
+position = Vector2( 1868.34, -1066.83 )
 followDistance = 0
 
 [node name="gate" parent="YSort" instance=ExtResource( 30 )]
