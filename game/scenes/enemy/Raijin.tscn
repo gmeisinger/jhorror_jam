@@ -1,0 +1,109 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/enemy/Raijin.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/RaijinSheet.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/shocked.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 19.8566
+
+[sub_resource type="Animation" id=3]
+resource_name = "idle"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "kill"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 7, 8, 9, 10, 11, 8, 7, 6, 5 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "kill"
+length = 0.8
+step = 0.07
+tracks/0/type = "value"
+tracks/0/path = NodePath("victim:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.07, 0.14, 0.21, 0.28, 0.35, 0.42, 0.49, 0.56, 0.63, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+}
+
+[node name="Raijin" type="KinematicBody2D"]
+position = Vector2( -0.27739, 24.965 )
+collision_layer = 0
+script = ExtResource( 1 )
+followDistance = 0
+spriteTexture = ExtResource( 2 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -0.554779, 1.10955 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.861359, 1.18255 )
+shape = SubResource( 1 )
+
+[node name="hitbox" type="Area2D" parent="."]
+position = Vector2( -0.554779, 3.05128 )
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2( 0.903748, 0.225937 )
+shape = SubResource( 6 )
+
+[node name="3DirSprite" type="Sprite" parent="."]
+position = Vector2( 0, -24.1329 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 6
+frame = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="3DirSprite"]
+autoplay = "idle"
+anims/idle = SubResource( 3 )
+anims/kill = SubResource( 4 )
+
+[node name="kill_sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, -24.1329 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="kill_sprite"]
+anims/kill = SubResource( 5 )
+
+[node name="victim" type="Sprite" parent="kill_sprite"]
+position = Vector2( 0.27739, 22.4685 )
+texture = ExtResource( 3 )
+hframes = 11
+[connection signal="screen_entered" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+[connection signal="animation_finished" from="kill_sprite/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
